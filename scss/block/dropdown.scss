@@ -1,0 +1,25 @@
+.dropdown {
+  display: flex;
+  position: relative;
+}
+
+.dropdown__menu {
+  display: flex;
+  position: absolute;
+  min-width: 273px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
+  color: #000;
+  font-size: 16px;
+  border-radius: 4px;
+  right: 9999;
+  opacity: 0;
+  transform: opacity 0.3s;
+  padding: 30px 25px;
+}
+
+.dropdown:hover .dropdown__menu {
+  position: absolute;
+  top: 100%;
+  opacity: 0.8;
+}

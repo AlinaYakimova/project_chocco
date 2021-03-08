@@ -1,0 +1,44 @@
+.hero {
+  background: url("../../img/bg_hero/chocolate.png") left 85% bottom 30% no-repeat, url("../../img/bg_hero/leaf.png") right bottom no-repeat;
+  background-color: $blue;
+  
+
+  // &-maincontainer {
+  // }
+
+  &-container {
+  display: flex;
+  color: #fff;
+  padding: 24px 0px 50px;
+  position: relative;
+  }
+
+  &-container::after {
+    content: "";
+    position: absolute;
+    width: 59px;
+    height: 113px;
+    background: url("../../img/leaf-bg/decor2.png") center center no-repeat;
+    bottom: -6%;
+    left: -5%;
+
+  }
+}
+
+.hero__content {
+  width: 35%;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 64px;
+}
+
+.hero__title {
+  margin-bottom: 17px;
+}
+
+.hero__text {
+  font-size: 21px;
+  margin-bottom: 32px;
+}

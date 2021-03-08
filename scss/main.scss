@@ -1,0 +1,34 @@
+$containerWidth: 940px;
+$baseFontSize: 18px;
+
+$z-fixed-menu: 100;
+
+$blue: #61C4D9;
+$green: #497870;
+
+@import './layout/normalize.scss';
+
+@import './layout/fonts.scss';
+@import './layout/base.scss';
+
+@import './block/body.scss';
+@import './block/hero.scss';
+@import './block/header.scss';
+@import './block/menu.scss';
+@import './block/contacts.scss';
+@import './block/common.scss';
+@import './block/bullet.scss';
+@import './block/features.scss';
+@import './block/card.scss';
+@import './block/shop.scss';
+@import './block/short.scss';
+@import './block/dropdown.scss';
+@import './block/feedback.scss';
+@import './block/delivery.scss';
+@import './block/form.scss';
+@import './block/radio.scss';
+@import './block/footer.scss';
+@import './block/socials.scss';
+@import './block/fixed-menu.scss';
+
+

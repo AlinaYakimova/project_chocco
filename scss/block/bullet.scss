@@ -1,0 +1,24 @@
+.bullet__list {
+  display: flex;
+  justify-content: start;
+}
+
+.bullet__item {
+  display: flex;
+  align-items: center;
+  margin-right: 13px;
+  
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.bullet__pic {
+  margin-right: 12px;
+}
+
+.bullet__text {
+  max-width: 84px;
+  font-size: 16px;
+  line-height: 18px;
+}

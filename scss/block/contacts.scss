@@ -1,0 +1,39 @@
+.contacts {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.contacts__handset {
+  margin-right: 6px;
+}
+
+.contacts__phone {
+  font-size: 22px;
+  margin-left: 18px;
+  position: relative;
+  
+  &:before {
+    content: "";
+    background: url("../img/phone.png") center center no-repeat;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 8px;
+    left: -18px;
+  }
+}
+
+.contacts__phone--green {
+  color: $green;
+  display: flex;
+  font-size: 21px;
+  position: relative;
+  
+  &:before {
+    content: "";
+    background: url("../img/phone1.png") center center no-repeat;
+  }
+}
