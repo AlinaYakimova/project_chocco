@@ -1,9 +1,10 @@
 .features {
-  background: url("../../img/features/leaf2.png") left center no-repeat;
   background-color: #fff;
   
   &__container {
     padding: 100px 0px;
+    background: url("../../img/features/leaf2.png") left center no-repeat;
+
   }
     
   &__header {
@@ -30,5 +31,7 @@
   
   &__cards {
     width: calc(100%/3 - 29px);
+
+    
   }
 }

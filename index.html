@@ -13,9 +13,11 @@
   <div class="wrapper main-pic-wrapper">
     <div class="wrapper-content">
 
-      <section class="hero">
-        <div class="maincontainer hero-maincontainer">
-         <div class="container hero-container">
+      <main class="main-content">
+
+        <section class="hero">
+
+          <div class="container hero-container hero-container--bg">
             <header class="header">
               <a href="/" class="header__logo logo">
                 <img src="./img/logo/logo.png" alt="chocco" class="logo__pic">
@@ -57,31 +59,6 @@
               </div>
               <button class="hero__button common__button">заказать
               </button>
-              <!-- <div class="hero__pagination pagination">
-                <ul class="pagination__list">
-                  <li class="pagination__item">
-                    <a href="#" class="pagination__link pagination__link-active"></a>
-                  </li>
-                  <li class="pagination__item">
-                    <a href="#" class="pagination__link"></a>
-                  </li>
-                  <li class="pagination__item">
-                    <a href="#" class="pagination__link"></a>
-                  </li>
-                  <li class="pagination__item">
-                    <a href="#" class="pagination__link"></a>
-                  </li>
-                  <li class="pagination__item">
-                    <a href="#" class="pagination__link"></a>
-                  </li>
-                  <li class="pagination__item">
-                    <a href="#" class="pagination__link"></a>
-                  </li>
-                  <li class="pagination__item">
-                    <a href="#" class="pagination__link"></a>
-                  </li>
-                </ul>
-              </div> -->
             </div>
             <ul class="hero__bullet bullet__list">
               <li class="bullet__item">
@@ -100,52 +77,57 @@
                 </div>
               </li>
             </ul>
-         </div>
-        </div>
-      </section>
+          </div>
 
-      <main class="main-content">
+        </section>
 
         <section class="features">
-          <div class="maincontainer ">
-            <div class="container features__container">
-              <div class="features__header">
-                <h1 class="features__title">почему chocco?</h1>
-                <div class="features__text">В нашем мире все происходит очень быстро, поэтому мы делаем батончики, которые
-                  удобно взять с собой.
-                </div>
+
+          <div class="container features__container">
+            <div class="features__header">
+              <h1 class="features__title">почему chocco?</h1>
+              <div class="features__text">В нашем мире все происходит очень быстро, поэтому мы делаем батончики,
+                которые
+                удобно взять с собой.
               </div>
-              <ul class="features__list">
-                <li class="features__cards card">
-                  <div class="card__icon card__icon--man"></div>
-                  <div class="card__content">
-                    <h3 class="card__title">Полезно</h3>
-                    <div class="card__text">Натуральность - ключевое качество нашей продукции. Мы используем только
-                      природные ингредиенты.
-                    </div>
-                  </div>
-                </li>
-                <li class="features__cards card">
-                  <div class="card__icon card__icon--smile"></div>
-                  <div class="card__content">
-                    <h3 class="card__title">Вкусно</h3>
-                    <div class="card__text">Нежный, ненавязчивый, изысканный – так клиенты описывают вкусовые качества
-                      наших батончиков.
-                    </div>
-                  </div>
-                </li>
-                <li class="features__cards card">
-                  <div class="card__icon card__icon--hand"></div>
-                  <div class="card__content">
-                    <h3 class="card__title">Питательно</h3>
-                    <div class="card__text">Высокое содержание качественного белка, а также всех необходимых витаминов и
-                      минералов.
-                    </div>
-                  </div>
-                </li>
-              </ul>
             </div>
+            <ul class="features__list">
+              <li class="features__cards card">
+                <div class="card__icon">
+                  <img src="./img/features/man.png" class="card__item" alt="man">
+                </div>
+                <div class="card__content">
+                  <h3 class="card__title">Полезно</h3>
+                  <div class="card__text">Натуральность - ключевое качество нашей продукции. Мы используем только
+                    природные ингредиенты.
+                  </div>
+                </div>
+              </li>
+              <li class="features__cards card">
+                <div class="card__icon">
+                  <img src="./img/features/smile.png" class="card__item" alt="smile">
+                </div>
+                <div class="card__content">
+                  <h3 class="card__title">Вкусно</h3>
+                  <div class="card__text">Нежный, ненавязчивый, изысканный – так клиенты описывают вкусовые качества
+                    наших батончиков.
+                  </div>
+                </div>
+              </li>
+              <li class="features__cards card">
+                <div class="card__icon">
+                  <img src="./img/features/hand.png" class="card__item" alt="hand">
+                </div>
+                <div class="card__content">
+                  <h3 class="card__title">Питательно</h3>
+                  <div class="card__text">Высокое содержание качественного белка, а также всех необходимых витаминов и
+                    минералов.
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
+
         </section>
 
         <section class="shop">
@@ -227,7 +209,9 @@
             <h1 class="feedback__title">отзывы</h1>
             <div class="feedback__content">
               <div class="feedback__card">
-                <img src="./img/feedback/ax.png" alt="" class="feedback__pic">
+                <div class="feedback__elem">
+                  <img src="./img/feedback/ax.png" alt="" class="feedback__pic">
+                </div>
                 <div class="feedback__comment">
                   <h3 class="feedback__subtitle">Лучший перекус</h3>
                   <p class="feedback__text">Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В
@@ -374,8 +358,9 @@
           </ul>
         </div>
       </div>
+    </footer>
   </div>
-  
+
   <nav class="fixed-menu">
     <ul class="fixed-menu__list">
       <li class="fixed-menu__item fixed-menu__item--activ">
@@ -407,8 +392,8 @@
       </li>
     </ul>
   </nav>
-  </footer>
-  </div>
+
+  <!-- </div> -->
 </body>
 
 </html>

@@ -363,12 +363,6 @@ body {
   flex: 1;
 }
 
-.maincontainer {
-  margin: 0 auto;
-  width: 1100px;
-  display: flex;
-}
-
 .container {
   margin: 0 auto;
   width: 940px;
@@ -493,7 +487,6 @@ ul li {
 }
 
 .hero {
-  background: url("../../img/bg_hero/chocolate.png") left 85% bottom 30% no-repeat, url("../../img/bg_hero/leaf.png") right bottom no-repeat;
   background-color: #61C4D9;
 }
 .hero-container {
@@ -501,6 +494,9 @@ ul li {
   color: #fff;
   padding: 24px 0px 50px;
   position: relative;
+}
+.hero-container--bg {
+  background: url("../../img/bg_hero/leaf.png") right bottom no-repeat;
 }
 .hero-container::after {
   content: "";
@@ -511,6 +507,15 @@ ul li {
   bottom: -6%;
   left: -5%;
 }
+.hero-container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../../img/bg_hero/chocolate.png") left 100% bottom no-repeat;
+  bottom: -6%;
+  right: 0;
+}
 
 .hero__content {
   width: 35%;
@@ -518,6 +523,7 @@ ul li {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: flex-start;
   margin-bottom: 64px;
 }
 
@@ -563,6 +569,7 @@ ul li {
   display: flex;
   align-items: center;
   position: relative;
+  font-style: normal;
 }
 
 .contacts__handset {
@@ -598,14 +605,13 @@ ul li {
 }
 
 .common__button {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   background: #fff;
   color: #365A49;
   font-weight: 800;
-  width: 156px;
-  height: 60px;
+  padding: 21px 41px;
   border-radius: 100px;
   text-transform: uppercase;
   transform: 0.3s;
@@ -664,11 +670,11 @@ ul li {
 }
 
 .features {
-  background: url("../../img/features/leaf2.png") left center no-repeat;
   background-color: #fff;
 }
 .features__container {
   padding: 100px 0px;
+  background: url("../../img/features/leaf2.png") left center no-repeat;
 }
 .features__header {
   display: flex;
@@ -696,6 +702,16 @@ ul li {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+}
+.card:not(:last-child):after {
+  content: "";
+  position: absolute;
+  background: url("../../img/features/Combined-shape.png") center center no-repeat;
+  left: 80%;
+  top: 18%;
+  width: 50%;
+  height: 20%;
 }
 
 .card__content {
@@ -706,31 +722,23 @@ ul li {
 }
 
 .card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 128px;
   height: 128px;
   border-radius: 50%;
   background: #F2F5F4;
-  margin-bottom: 20px;
   position: relative;
+  padding: 20px;
+  margin-bottom: 20px;
 }
-.card__icon:after {
-  content: "";
-  display: block;
-  width: 64px;
-  height: 68px;
-  position: absolute;
+
+.card__item {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-}
-.card__icon--man:after {
-  background: url("../../img/features/man.png") center center no-repeat;
-}
-.card__icon--smile:after {
-  background: url("../../img/features/smile.png") center center no-repeat;
-}
-.card__icon--hand:after {
-  background: url("../../img/features/hand.png") center center no-repeat;
+  position: absolute;
 }
 
 .card__title {
@@ -818,16 +826,20 @@ ul li {
   height: 100%;
   top: 24%;
 }
+.feedback:after {
+  content: "";
+  display: block;
+  background: url("../../img/berry-bg/berry_6.png") right top no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 5%;
+}
 .feedback-container {
   display: flex;
   position: relative;
   flex-direction: column;
   padding: 62px 0px;
-}
-.feedback-container:after {
-  content: "";
-  background-image: url("../../img/feedback/leaf3.png") left bottom -20% no-repeat;
-  position: absolute;
 }
 .feedback__title {
   text-align: center;
@@ -852,12 +864,15 @@ ul li {
   width: 83px;
   height: 83px;
   border-radius: 50%;
-  color: #fff;
+  background: #fff;
   position: absolute;
-  top: 100%;
+  top: -16%;
   left: 50%;
 }
-.feedback__pic {
+.feedback__elem {
+  width: 253px;
+  height: 264px;
+  max-width: 100%;
   margin-right: 40px;
 }
 .feedback__comment {
@@ -884,13 +899,16 @@ ul li {
 .feedback__item:last-child {
   margin-right: 0;
 }
-.feedback__icon {
+.feedback__link {
+  display: block;
+  width: 78px;
+  height: 78px;
   border-radius: 50%;
-  width: 74px;
-  height: 74px;
+  max-width: 100%;
+  overflow: hidden;
   border: 4px solid transparent;
 }
-.feedback__icon:hover {
+.feedback__link:hover {
   border: 4px solid #365A49;
 }
 
@@ -935,7 +953,8 @@ ul li {
 
 .form__comment {
   width: 100%;
-  padding: 19px 12px;
+  padding: 16px 12px;
+  border-radius: 4px;
   border: solid 3px transparent;
 }
 .form__comment:focus {
@@ -951,10 +970,13 @@ ul li {
 .form__controls {
   display: flex;
   flex-wrap: wrap;
+  padding-top: 10px;
 }
 
 .form__buttons {
   display: flex;
+  padding-top: 22px;
+  font-size: 16px;
 }
 
 .radio {
@@ -982,8 +1004,8 @@ ul li {
 }
 
 .radio__visible {
-  width: 25px;
-  height: 25px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   position: relative;
   background: #fff;
@@ -1065,7 +1087,7 @@ ul li {
 .fixed-menu {
   position: fixed;
   top: 20%;
-  right: 3%;
+  right: calc(50% - 500px);
   z-index: 100;
 }
 

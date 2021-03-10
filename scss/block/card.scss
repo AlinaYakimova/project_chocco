@@ -2,6 +2,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+
+  &:not(:last-child):after {
+    content: "";
+    position: absolute;
+    background: url("../../img/features/Combined-shape.png") center center no-repeat;
+    left: 80%;
+    top: 18%;
+    width: 50%;
+    height: 20%;
+  }
+
 }
 
 .card__content {
@@ -12,32 +24,36 @@
 }
 
 .card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 128px;
   height: 128px;
   border-radius: 50%;
   background: #F2F5F4;
-  margin-bottom: 20px;
   position: relative;
+  padding: 20px;
+  margin-bottom: 20px;
 
-  &:after {
-    content: "";
-    display: block;
-    width: 64px;
-    height: 68px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    
-  }
+  
 
-  @each $card__icon in (man, smile, hand) {
-    &--#{$card__icon} {
-      &:after {
-        background: url("../../img/features/#{$card__icon}.png") center center no-repeat;
-      }
-    }
-  }
+ 
+}
+
+
+  // @each $card__icon in (man, smile, hand) {
+  //   &--#{$card__icon} {
+  //     &:after {
+  //       background: url("../../img/features/#{$card__icon}.png") center center no-repeat;
+  //     }
+  //   }
+  // }
+
+.card__item {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
 }
 
 .card__title {
