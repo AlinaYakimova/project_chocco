@@ -1,9 +1,6 @@
 .hero {
+  background: url("../img/bg_hero/leaf.png") right bottom no-repeat;
   background-color: $blue;
-
-
-  // &-maincontainer {
-  // }
 
   &-container {
     display: flex;
@@ -11,12 +8,6 @@
     padding: 24px 0px 50px;
     position: relative;
 
-    &--bg {
-      
-      background: url("../../img/bg_hero/leaf.png") right bottom no-repeat;
-     
-
-    }
   }
 
   &-container::after {
@@ -24,7 +15,7 @@
     position: absolute;
     width: 59px;
     height: 113px;
-    background: url("../../img/leaf-bg/decor2.png") center center no-repeat;
+    background: url("../img/leaf-bg/decor2.png") center center no-repeat;
     bottom: -6%;
     left: -5%;
 
@@ -32,18 +23,18 @@
   &-container::before {
     content: "";
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background: url("../../img/bg_hero/chocolate.png") left 100% bottom no-repeat;
+    width: 520px;
+    height: 614px;
+    background: url("../img/bg_hero/chocolate.png") left 100% bottom no-repeat;
     bottom: -6%;
-    right: 0;
+    right: -70px;
 
   }
 }
 
 .hero__content {
   width: 35%;
-  min-height: 480px;
+  min-height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;

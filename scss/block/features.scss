@@ -1,9 +1,21 @@
 .features {
+  background: url("../img/features/leaf2.png") left center no-repeat;
   background-color: #fff;
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 161px;
+    height: 315px;
+    background: url("../img/berry-bg/berry_1.png") center/contain no-repeat;
+    left: 0;
+    bottom: -107px;
+  }
   
   &__container {
     padding: 100px 0px;
-    background: url("../../img/features/leaf2.png") left center no-repeat;
 
   }
     
@@ -17,11 +29,12 @@
   &__title {
     text-transform: uppercase;
     margin-bottom: 19px;
+    overflow: hidden;
   }
   
   &__text {
-    max-width: 436px;
     text-align: center;
+    padding: 0 26%;
   }
   
   &__list {

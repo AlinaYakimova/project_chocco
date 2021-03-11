@@ -19,7 +19,7 @@
   @each $socials__link in (vk, facebook, inst, twitter) {
     &--#{$socials__link} {
       &:after {
-        background: url("../../img/socials/#{$socials__link}.png") center center no-repeat;
+        background: url("../img/socials/#{$socials__link}.png") center center no-repeat;
       }
     }
   }

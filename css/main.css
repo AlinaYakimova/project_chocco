@@ -484,9 +484,11 @@ ul li {
 
 .container {
   flex-direction: column;
+  z-index: 2;
 }
 
 .hero {
+  background: url("../img/bg_hero/leaf.png") right bottom no-repeat;
   background-color: #61C4D9;
 }
 .hero-container {
@@ -495,31 +497,28 @@ ul li {
   padding: 24px 0px 50px;
   position: relative;
 }
-.hero-container--bg {
-  background: url("../../img/bg_hero/leaf.png") right bottom no-repeat;
-}
 .hero-container::after {
   content: "";
   position: absolute;
   width: 59px;
   height: 113px;
-  background: url("../../img/leaf-bg/decor2.png") center center no-repeat;
+  background: url("../img/leaf-bg/decor2.png") center center no-repeat;
   bottom: -6%;
   left: -5%;
 }
 .hero-container::before {
   content: "";
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background: url("../../img/bg_hero/chocolate.png") left 100% bottom no-repeat;
+  width: 520px;
+  height: 614px;
+  background: url("../img/bg_hero/chocolate.png") left 100% bottom no-repeat;
   bottom: -6%;
-  right: 0;
+  right: -70px;
 }
 
 .hero__content {
   width: 35%;
-  min-height: 480px;
+  min-height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -670,11 +669,22 @@ ul li {
 }
 
 .features {
+  background: url("../img/features/leaf2.png") left center no-repeat;
   background-color: #fff;
+  position: relative;
+}
+.features:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 161px;
+  height: 315px;
+  background: url("../img/berry-bg/berry_1.png") center/contain no-repeat;
+  left: 0;
+  bottom: -107px;
 }
 .features__container {
   padding: 100px 0px;
-  background: url("../../img/features/leaf2.png") left center no-repeat;
 }
 .features__header {
   display: flex;
@@ -685,10 +695,11 @@ ul li {
 .features__title {
   text-transform: uppercase;
   margin-bottom: 19px;
+  overflow: hidden;
 }
 .features__text {
-  max-width: 436px;
   text-align: center;
+  padding: 0 26%;
 }
 .features__list {
   display: flex;
@@ -707,7 +718,7 @@ ul li {
 .card:not(:last-child):after {
   content: "";
   position: absolute;
-  background: url("../../img/features/Combined-shape.png") center center no-repeat;
+  background: url("../img/features/Combined-shape.png") center center no-repeat;
   left: 80%;
   top: 18%;
   width: 50%;
@@ -821,19 +832,22 @@ ul li {
   content: "";
   display: block;
   position: absolute;
-  background: url("../../img/berry-bg/berry_mix.png") left bottom 16% no-repeat, url("../../img/feedback/leaf3.png") left bottom no-repeat;
-  width: 100%;
-  height: 100%;
-  top: 24%;
+  background: url("../img/berry-bg/berry_mix.png") left bottom 46% no-repeat, url("../../img/feedback/leaf3.png") left bottom no-repeat;
+  z-index: 1;
+  width: 135px;
+  height: 321px;
+  left: 0;
+  bottom: -150px;
 }
 .feedback:after {
   content: "";
   display: block;
-  background: url("../../img/berry-bg/berry_6.png") right top no-repeat;
+  background: url("../img/berry-bg/berry_6.png") right top no-repeat;
   position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 5%;
+  width: 136px;
+  height: 78px;
+  top: 44px;
+  right: 130px;
 }
 .feedback-container {
   display: flex;
@@ -844,6 +858,7 @@ ul li {
 .feedback__title {
   text-align: center;
   margin-bottom: 32px;
+  z-index: 1;
 }
 .feedback__content {
   display: flex;
@@ -851,7 +866,7 @@ ul li {
 }
 .feedback__card {
   display: flex;
-  background: url("../../img/feedback/bush.png") right top 15% no-repeat;
+  background: url("../img/feedback/bush.png") right top 15% no-repeat;
   background-color: #F8FAF9;
   width: 940px;
   min-height: 348px;
@@ -901,24 +916,59 @@ ul li {
 }
 .feedback__link {
   display: block;
-  width: 78px;
-  height: 78px;
+  width: 74px;
+  height: 74px;
   border-radius: 50%;
-  max-width: 100%;
   overflow: hidden;
   border: 4px solid transparent;
 }
 .feedback__link:hover {
   border: 4px solid #365A49;
 }
+.feedback__icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 .delivery {
   background: url("../img/delivery/bg_delivery.png") center center no-repeat;
+  position: relative;
+}
+.delivery:after {
+  content: "";
+  display: block;
+  background: url("../../img/berry-bg/berry.png") right top no-repeat;
+  position: absolute;
+  width: 196px;
+  height: 264px;
+  top: -165px;
+  right: 0;
 }
 
 .delivery-container {
   padding: 62px 0px 85px;
   color: #365A49;
+}
+.delivery-container:after {
+  content: "";
+  display: block;
+  background: url("../img/berry-bg/berry_3.png") center/contain no-repeat;
+  position: absolute;
+  width: 47px;
+  height: 48px;
+  left: -30px;
+  bottom: 68px;
+}
+.delivery-container:before {
+  content: "";
+  display: block;
+  background: url("../img/leaf-bg/decor7.png") right top no-repeat;
+  position: absolute;
+  width: 135px;
+  height: 188px;
+  right: -68px;
+  bottom: 58px;
 }
 
 .delivery__title {
@@ -1072,16 +1122,16 @@ ul li {
   transition: .3s;
 }
 .socials__link--vk:after {
-  background: url("../../img/socials/vk.png") center center no-repeat;
+  background: url("../img/socials/vk.png") center center no-repeat;
 }
 .socials__link--facebook:after {
-  background: url("../../img/socials/facebook.png") center center no-repeat;
+  background: url("../img/socials/facebook.png") center center no-repeat;
 }
 .socials__link--inst:after {
-  background: url("../../img/socials/inst.png") center center no-repeat;
+  background: url("../img/socials/inst.png") center center no-repeat;
 }
 .socials__link--twitter:after {
-  background: url("../../img/socials/twitter.png") center center no-repeat;
+  background: url("../img/socials/twitter.png") center center no-repeat;
 }
 
 .fixed-menu {
