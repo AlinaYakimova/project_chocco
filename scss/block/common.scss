@@ -1,12 +1,13 @@
 .common__button {
+  font-size: rem(16px);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   background: #fff;
   color: #365A49;
   font-weight: 800;
-  padding: 21px 41px;
-  border-radius: 100px;
+  padding: rem(21px) rem(41px);
+  border-radius: rem(100px);
   text-transform: uppercase;
   transform: 0.3s;
   

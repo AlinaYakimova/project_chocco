@@ -7,16 +7,16 @@
     display: block;
     background: url("../../img/berry-bg/berry.png") right top no-repeat;
     position: absolute;
-    width: 196px;
-    height: 264px;
-    top: -165px;
+    width: rem(220px);
+    height: rem(300px);
+    top: rem(-165px);
     right: 0;
   }
 }
 
 
 .delivery-container {
-  padding: 62px 0px 85px;
+  padding: rem(62px) rem(0px) rem(85px);
   color: #365A49;
   
   &:after {
@@ -24,10 +24,10 @@
     display: block;
     background: url("../img/berry-bg/berry_3.png") center/contain no-repeat;
     position: absolute;
-    width: 47px;
-    height: 48px;
-    left: -30px;
-    bottom: 68px;
+    width: rem(47px);
+    height: rem(48px);
+    left: rem(-30px);
+    bottom: rem(68px);
   }
 
   &:before {
@@ -35,14 +35,14 @@
     display: block;
     background: url("../img/leaf-bg/decor7.png") right top no-repeat;
     position: absolute;
-    width: 135px;
-    height: 188px;
-    right: -68px;
-    bottom: 58px;
+    width: rem(150px);
+    height: rem(220px);
+    right: rem(-68px);
+    bottom: rem(58px);
   }
 }
 
 .delivery__title {
   text-align: center;
-  margin-bottom: 59px;
+  margin-bottom: rem(59px);
 }

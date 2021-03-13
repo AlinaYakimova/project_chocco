@@ -3,7 +3,7 @@
 }
 
 .socials__item {
-  margin-right: 14px;
+  margin-right: rem(14px);
   
   &:last-child {
     margin-right: 0;
@@ -12,13 +12,16 @@
 
 .socials__link {
   display: block;
-  width: 20px;
-  height: 20px;
+  width: rem(20px);
+  height: rem(20px);
   transition: .3s;
+  position: relative;
 
   @each $socials__link in (vk, facebook, inst, twitter) {
     &--#{$socials__link} {
       &:after {
+        content: "";
+        position: absolute;
         background: url("../img/socials/#{$socials__link}.png") center center no-repeat;
       }
     }
@@ -28,17 +31,17 @@
 
 
 // .socials__link--vk {
-//   background: url("../img/sosials/css_sprites.png") -130px -10px;
+//   background: url("../img/sosials/css_sprites.png") rem(-130px) rem(-10px);
 // }
 
 // .socials__link--facebook {
-//   background: url("../img/sosials/css_sprites.png") -10px -10px;
+//   background: url("../img/sosials/css_sprites.png") rem(-10px) rem(-10px);
 // }
 
 // .socials__link--inst {
-//   background: url("../img/sosials/css_sprites.png") -50px -10px;
+//   background: url("../img/sosials/css_sprites.png") rem(-50px) rem(-10px);
 // }
 
 // .socials__link--twitter {
-//   background: url("../img/sosials/css_sprites.png") -90px -10px;
+//   background: url("../img/sosials/css_sprites.png") rem(-90px) rem(-10px);
 // }

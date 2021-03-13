@@ -1,9 +1,17 @@
 .header {
   display: flex;
-  height: 38px;
-  margin-bottom: 20px;
+  align-items: center;
+  justify-content: space-between;
+  height: rem(38px);
+  margin-bottom: rem(20px);
+
+  &__logo {
+    margin-right: rem(40px);
+  }
 }
 
-.header__logo {
-  margin-right: 40px;
+.header__phone {
+  @include tablets {
+    display: none;
+  }
 }

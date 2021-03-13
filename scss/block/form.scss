@@ -4,7 +4,7 @@
 
 .form__col {
   flex: 1;
-  margin-right: 27px;
+  margin-right: rem(27px);
   
   &:last-child {
     margin-right: 0;
@@ -13,12 +13,12 @@
 
 .form__row {
   display: flex;
-  margin-bottom: 12px;
+  margin-bottom: rem(12px);
 }
 
 .form__block {
   flex: 1;
-  margin-right: 15px;
+  margin-right: rem(15px);
   
   &:last-child {
     margin-right: 0;
@@ -27,9 +27,9 @@
 
 .form__comment {
   width: 100%;
-  padding: 16px 12px;
-  border-radius: 4px;
-  border: solid 3px transparent;
+  padding: rem(16px) rem(12px);
+  border-radius: rem(4px);
+  border: solid rem(3px) transparent;
   
   &:focus {
     border-color: #DEE2BD;
@@ -38,18 +38,18 @@
 }
 
 .form__comment--textarea {
-  height: 152px;
+  height: rem(152px);
   resize: none;
 }
 
 .form__controls {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 10px;
+  padding-top: rem(10px);
 }
 
 .form__buttons {
   display: flex;
-  padding-top: 22px;
-  font-size: 16px;
+  padding-top: rem(22px);
+  font-size: rem(16px);
 }

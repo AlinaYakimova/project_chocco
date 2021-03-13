@@ -6,7 +6,7 @@
 .bullet__item {
   display: flex;
   align-items: center;
-  margin-right: 13px;
+  margin-right: rem(13px);
   
   &:last-child {
     margin-right: 0;
@@ -14,11 +14,12 @@
 }
 
 .bullet__pic {
-  margin-right: 12px;
+  width: rem(45px);
+  margin-right: rem(12px);
 }
 
 .bullet__text {
-  max-width: 84px;
-  font-size: 16px;
-  line-height: 18px;
+  max-width: rem(84px);
+  font-size: rem(16px);
+  line-height: rem(18px);
 }
