@@ -1,0 +1,112 @@
+.hero {
+  background: url("../img/bg_hero/leaf.png") right bottom no-repeat;
+  background-color: $blue;
+
+  @include tablets {
+    background-position: right bottom 63%;
+  }
+
+  @include phones {
+    background: url("../img/bg_hero/leaf-phone.png") right top 8% no-repeat;
+    background-color: $blue;
+  }
+
+  &-container {
+    color: #fff;
+    padding: rem(24px) rem(0px) rem(50px);
+    position: relative;
+    justify-content: space-between;
+    background: url("../img/bg_hero/chocolate_1.png") right 13% center/45% no-repeat;
+
+    @include tablets {
+      background: none;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: rem(70px);
+      height: rem(136px);
+      background: url("../img/leaf-bg/decor2.png") center center no-repeat;
+      bottom: -6%;
+      left: -5%;
+      
+      @include tablets {
+        display: none;
+      }
+
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: rem(520px);
+      height: rem(366px);
+      background: url("../img/bg_hero/mix.png") right bottom no-repeat;
+      bottom: -6%;
+      right: rem(-70px);
+
+      @include tablets {
+        display: none;
+      }
+    }
+  }
+}
+
+.hero__content {
+  width: 35%;
+  min-height: rem(400px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-bottom: rem(64px);
+
+  @include tablets {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 51%;
+      background: url("../img/bg_hero/chocolate.png") center center no-repeat;
+    }
+  }
+
+  @include phones {
+    
+    &::before {
+      content: "";
+      height: 55%;
+      background: url("../../img/bg_hero/chocolate-phone.png") center center no-repeat;
+    }
+  }
+}
+
+.hero__title {
+  margin-bottom: rem(17px);
+
+  @include tablets {
+    margin-bottom: 0;
+  }
+}
+
+.hero__text {
+  font-size: rem(21px);
+  margin-bottom: rem(26px);
+
+  @include tablets {
+    padding: 0 26%;
+  }
+
+  @include phones {
+    padding: 0 15%;
+  }
+}

@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: rem(38px);
+  margin-bottom: rem(20px);
+
+  &__logo {
+    margin-right: rem(40px);
+  }
+}
+
+.header__logo {
+  flex-shrink: 0;
+}
+
+.header__phone {
+  @include tablets {
+    display: none;
+  }
+}

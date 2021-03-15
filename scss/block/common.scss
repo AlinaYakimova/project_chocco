@@ -1,0 +1,46 @@
+.common__button {
+  font-size: rem(16px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: #365A49;
+  font-weight: 800;
+  padding: rem(21px) rem(41px);
+  border-radius: rem(100px);
+  text-transform: uppercase;
+  transform: 0.3s;
+  
+  &:hover {
+    background: $green;
+    color: #fff;
+  }
+}
+
+.common__button--green {
+  background: $green;
+  color: #fff;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    background: #fff;
+    color: #365A49;
+  }
+}
+
+.common__button--transparent {
+  background: transparent;
+  color: #365A49;
+  text-transform: none;
+  font-weight: 400;
+
+  &:hover {
+    background: transparent;
+    font-weight: 800;
+    color: #365A49;
+
+  }
+}

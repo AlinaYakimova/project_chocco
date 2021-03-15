@@ -1,0 +1,85 @@
+.features {
+  display: flex;
+  background: url("../img/features/leaf2.png") left center no-repeat;
+  background-color: #fff;
+  position: relative;
+
+
+@include tablets {
+  background-position: left top 13%;
+}
+
+@include phones {
+  background: none;
+}
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: rem(161px);
+    height: rem(315px);
+    background: url("../img/berry-bg/berry_1.png") center/contain no-repeat;
+    left: 0;
+    bottom: rem(-107px);
+
+    @include phones {
+      display: none;
+    }
+  }
+
+  &__container {
+    padding: rem(100px) rem(0px);
+
+    @include phones {
+      justify-content: flex-start;
+      padding: rem(50px) rem(0px);
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: rem(49px);
+  }
+
+  &__title {
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: rem(19px);
+    overflow: hidden;
+  }
+
+  &__text {
+    text-align: center;
+    padding: 0 26%;
+
+    @include tablets {
+      padding: 0 20%;
+      font-weight: 300;
+    }
+
+    @include phones {
+      padding: 0 5%;
+      line-height: rem(20px);
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+
+    @include phones {
+      flex-direction: column;
+    }
+  }
+
+  &__cards {
+    width: calc(100%/3 - 29px);
+
+    @include tablets {
+      width: 100%;
+    }
+  }
+}

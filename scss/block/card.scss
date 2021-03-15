@@ -1,0 +1,88 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  @include phones {
+    flex-direction: row;
+  }
+
+
+
+  &:not(:last-child):after {
+    content: "";
+    position: absolute;
+    background: url("../img/features/Combined-shape.png") center center no-repeat;
+    left: 80%;
+    top: 18%;
+    width: 50%;
+    height: 20%;
+
+    @include tablets {
+      display: none;
+    }
+  }
+
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @include phones {
+    flex: 1;
+    align-items: flex-start;
+  }
+}
+
+.card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(128px);
+  height: rem(128px);
+  border-radius: 50%;
+  background: #F2F5F4;
+  position: relative;
+  padding: rem(20px);
+  margin-bottom: rem(20px);
+
+  @include phones {
+    margin-right: rem(12px);
+  }
+
+
+}
+
+
+// @each $card__icon in (man, smile, hand) {
+//   &--#{$card__icon} {
+//     &:after {
+//       background: url("../../img/features/#{$card__icon}.png") center center no-repeat;
+//     }
+//   }
+// }
+
+.card__item {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.card__title {
+  margin-bottom: rem(18px);
+}
+
+.card__text {
+  text-align: center;
+  color: #666666;
+  line-height: rem(22px);
+
+  @include phones {
+    text-align: start;
+  }
+}

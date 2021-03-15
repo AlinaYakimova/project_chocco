@@ -1,0 +1,29 @@
+.bullet__list {
+  display: flex;
+  justify-content: start;
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.bullet__item {
+  display: flex;
+  align-items: center;
+  margin-right: rem(13px);
+  
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.bullet__pic {
+  width: rem(45px);
+  margin-right: rem(12px);
+}
+
+.bullet__text {
+  max-width: rem(84px);
+  font-size: rem(16px);
+  line-height: rem(18px);
+}

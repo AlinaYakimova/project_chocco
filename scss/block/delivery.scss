@@ -1,0 +1,71 @@
+.delivery {
+  background: url("../img/delivery/bg_delivery.png") center center no-repeat;
+  position: relative;
+
+  &:after {
+    content: "";
+    display: block;
+    background: url("../img/berry-bg/berry.png") right top no-repeat;
+    position: absolute;
+    width: rem(220px);
+    height: rem(300px);
+    top: rem(-165px);
+    right: 0;
+
+    @include phones {
+      background: url("../img/berry-bg/berry-phone.png") right top no-repeat;
+      width: rem(110px);
+      height: rem(156px);
+      top: rem(-90px);
+    }
+  }
+}
+
+
+.delivery-container {
+  padding: rem(24px) rem(0px) rem(138px);
+  color: #365A49;
+
+  @include phones {
+    padding: rem(80px) rem(0px) rem(138px);
+  }
+  
+  &:after {
+    content: "";
+    display: block;
+    background: url("../img/berry-bg/berry_3.png") center/contain no-repeat;
+    position: absolute;
+    width: rem(47px);
+    height: rem(48px);
+    left: rem(-30px);
+    bottom: rem(68px);
+
+    @include tablets {
+      display: none;
+    }
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    background: url("../img/leaf-bg/decor7.png") right top no-repeat;
+    position: absolute;
+    width: rem(150px);
+    height: rem(220px);
+    right: rem(-68px);
+    bottom: rem(58px);
+
+    @include tablets {
+      display: none;
+    }
+  }
+}
+
+.delivery__title {
+  text-align: center;
+  margin-bottom: rem(59px);
+
+  @include tablets {
+    margin-bottom: rem(26px);
+  }
+}
