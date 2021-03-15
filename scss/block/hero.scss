@@ -5,7 +5,7 @@
 
   &-container {
     color: #fff;
-    padding: rem(24px) rem(0px) rem(50px);
+    padding: 24px 0px 50px;
     position: relative;
     justify-content: space-between;
   }
@@ -13,8 +13,8 @@
   &-container::after {
     content: "";
     position: absolute;
-    width: rem(70px);
-    height: rem(136px);
+    width: 59px;
+    height: 113px;
     background: url("../img/leaf-bg/decor2.png") center center no-repeat;
     bottom: -6%;
     left: -5%;
@@ -24,30 +24,30 @@
   &-container::before {
     content: "";
     position: absolute;
-    width: rem(520px);
-    height: rem(366px);
+    width: 520px;
+    height: 366px;
     background: url("../../img/bg_hero/mix.png") right bottom no-repeat;
     bottom: -6%;
-    right: rem(-70px);
+    right: -70px;
 
   }
 }
 
 .hero__content {
   width: 35%;
-  min-height: rem(400px);
+  min-height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  margin-bottom: rem(64px);
+  margin-bottom: 64px;
 }
 
 .hero__title {
-  margin-bottom: rem(17px);
+  margin-bottom: 17px;
 }
 
 .hero__text {
-  font-size: rem(21px);
-  margin-bottom: rem(32px);
+  font-size: 21px;
+  margin-bottom: 32px;
 }

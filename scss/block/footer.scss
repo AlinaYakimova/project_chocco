@@ -1,5 +1,5 @@
 .footer-container {
-  min-height: rem(90px);
+  min-height: 90px;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -10,7 +10,7 @@
   justify-content: space-between;
   align-items: center;
   flex: 1;
-  padding: rem(18px) rem(0px);
+  padding: 18px 0px;
   
   &--alight--right {
     display: flex;
@@ -26,5 +26,5 @@
 
 .footer__text {
   color: #292929;
-  font-size: rem(21px);
+  font-size: 21px;
 }

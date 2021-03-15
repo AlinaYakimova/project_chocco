@@ -1,11 +1,7 @@
 .menu {
   display: flex;
   align-items: center;
-  margin-right: rem(42px);
-
-  @include tablets {
-    display: none;
-  }
+  margin-right: 42px;
 }
 
 .menu__list {
@@ -15,7 +11,7 @@
 }
 
 .menu__item {
-  margin-right: rem(27px);
+  margin-right: 27px;
   
   &:last-child {
     margin-right: 0;

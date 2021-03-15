@@ -6,16 +6,16 @@
 .dropdown__menu {
   display: flex;
   position: absolute;
-  min-width: rem(273px);
+  min-width: 273px;
   background: rgba(255, 255, 255, 0.8);
-  box-shadow: rem(4px) rem(4px) rem(40px) rgba(0, 0, 0, 0.06);
+  box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
   color: #000;
-  font-size: rem(16px);
-  border-radius: rem(4px);
+  font-size: 16px;
+  border-radius: 4px;
   right: 9999;
   opacity: 0;
   transform: opacity 0.3s;
-  padding: rem(30px) rem(25px);
+  padding: 30px 25px;
 }
 
 .dropdown:hover .dropdown__menu {
