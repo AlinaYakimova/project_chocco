@@ -9,7 +9,10 @@ $phones: 480px;
 $z-fixed-menu: 100;
 
 $blue: #61C4D9;
+$lightBlue: #C6F7FF;
 $green: #497870;
+$black: #292929;
+$grey: #B3B3B3;
 
 @import './media.scss';
 
@@ -38,5 +41,6 @@ $green: #497870;
 @import './block/footer.scss';
 @import './block/socials.scss';
 @import './block/fixed-menu.scss';
+@import './block/map.scss';
 
 

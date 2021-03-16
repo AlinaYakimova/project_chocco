@@ -3,11 +3,8 @@
 
   @include tablets {
     flex-direction: column;
-    padding: 0 18%;
-  }
-
-  @include phones {
-    padding: 0;
+    max-width: 466px;
+    margin: 0 auto;
   }
 }
 

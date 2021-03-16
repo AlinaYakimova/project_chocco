@@ -17,18 +17,28 @@
   transition: .3s;
   position: relative;
 
-  @each $socials__link in (vk, facebook, inst, twitter) {
-    &--#{$socials__link} {
-      &:after {
-        content: "";
-        position: absolute;
-        background: url("../img/socials/#{$socials__link}.png") center center no-repeat;
-      }
-    }
-  }
+  // @each $socials__link in (vk, facebook, inst, twitter) {
+  //   &--#{$socials__link} {
+  //     &:after {
+  //       content: "";
+  //       position: absolute;
+  //       background: url("../img/socials/#{$socials__link}.png") center center no-repeat;
+  //     }
+  //   }
+  // }
 }
 
+.socials__icon {
+  display: flex;
+  align-items: center;
+  width: rem(20px);
+  height: rem(20px);
+  fill: $grey;
 
+  &:hover {
+    fill: $black;
+  }
+}
 
 // .socials__link--vk {
 //   background: url("../img/sosials/css_sprites.png") rem(-130px) rem(-10px);

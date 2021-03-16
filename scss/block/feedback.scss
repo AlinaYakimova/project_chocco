@@ -6,8 +6,8 @@
     content: "";
     display: block;
     position: absolute;
-    background: url("../img/berry-bg/berry_mix.png")left bottom 46% no-repeat, 
-    url("../img/feedback/leaf3.png") left bottom no-repeat;
+    background: url("../img/berry-bg/berry_mix.png")left bottom 46% / contain no-repeat, 
+    url("../img/feedback/leaf3.png") left bottom / contain no-repeat;
     z-index: 1;
     width: rem(150px);
     height: rem(350px);
@@ -15,9 +15,7 @@
     bottom: rem(-150px);
 
     @include phones {
-      background: url("../img/berry-bg/berry_mix-phone.png")left bottom 46% no-repeat, 
-    url("../img/feedback/leaf3-phone.png") left bottom no-repeat;
-    width: rem(122px);
+     width: rem(122px);
     height: rem(260px);
     bottom: rem(-114px);
   }
@@ -26,7 +24,7 @@
   &:after {
     content: "";
     display: block;
-    background: url("../img/berry-bg/berry_6.png") right top no-repeat;
+    background: url("../img/berry-bg/berry_6.png") right top / contain no-repeat;
     position: absolute;
     width: rem(150px);
     height: rem(90px);
@@ -67,7 +65,7 @@
 
   &__card {
     display: flex;
-    background: url("../img/feedback/bush.png") right top 15% no-repeat;
+    background: url("../img/feedback/bush.png") right top 15% / 130px no-repeat;
     background-color: #F8FAF9;
     width: 100%;
     min-height: rem(348px);
@@ -112,6 +110,7 @@
     @include tablets {
       width: rem(130px);
       height: rem(130px);
+      margin-right: 0;
     }
   }
 
@@ -126,7 +125,7 @@
   }
 
   &__text {
-    line-height: rem(22px);
+    line-height: 1;
     color: #666;
     margin-bottom: rem(25px);
     max-width: rem(445px);
@@ -155,11 +154,12 @@
     height: rem(74px);
     border-radius: 50%;
     overflow: hidden;
-    border: rem(4px) solid transparent;
+    border: 4px solid transparent;
 
 
     &:hover {
-      border: rem(4px) solid #365A49;
+      border-radius: 50%;
+      border: 4px solid #365A49;
     }
   }
   &__icon {

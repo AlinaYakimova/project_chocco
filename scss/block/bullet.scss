@@ -17,9 +17,16 @@
   }
 }
 
-.bullet__pic {
-  width: rem(45px);
+.bullet__icon {
+  width: rem(39px);
+  height: rem(37px);
   margin-right: rem(12px);
+}
+
+.bullet__pic {
+  max-width: 100%;
+  max-height: 100%;
+  fill: $lightBlue;
 }
 
 .bullet__text {

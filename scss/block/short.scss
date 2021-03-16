@@ -2,13 +2,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background: #86C3D7;
   border-radius: rem(4px);
   width: rem(91px);
   height: rem(91px);
   margin-bottom: rem(23px);
+  padding: rem(12px) rem(22px);
+}
 
+.button__icon {
+  display: flex;
+  align-items: center;
+  width: rem(46px);
+  height: rem(46px);
+  fill: #fff;
 }
 
 .button__name {

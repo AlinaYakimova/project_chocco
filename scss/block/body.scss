@@ -41,6 +41,10 @@ h1 {
   @include tablets {
     line-height: rem(58px);
   }
+
+  @include tablets {
+    font-size: rem(40px);
+  }
 }
 
 h2 {

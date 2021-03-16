@@ -16,7 +16,7 @@
     padding: rem(24px) rem(0px) rem(50px);
     position: relative;
     justify-content: space-between;
-    background: url("../img/bg_hero/chocolate_1.png") right 13% center/45% no-repeat;
+    background: url("../img/bg_hero/chocolate_1.png") right center/51% no-repeat;
 
     @include tablets {
       background: none;
@@ -76,16 +76,14 @@
       display: block;
       width: 100%;
       height: 51%;
-      background: url("../img/bg_hero/chocolate.png") center center no-repeat;
+      background: url("../img/bg_hero/chocolate.png") center center / contain no-repeat;
     }
   }
 
   @include phones {
-    
     &::before {
-      content: "";
       height: 55%;
-      background: url("../../img/bg_hero/chocolate-phone.png") center center no-repeat;
+      flex-shrink: 0;
     }
   }
 }
@@ -103,10 +101,7 @@
   margin-bottom: rem(26px);
 
   @include tablets {
-    padding: 0 26%;
+    max-width: 371px;
   }
 
-  @include phones {
-    padding: 0 15%;
-  }
 }

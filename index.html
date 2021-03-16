@@ -48,8 +48,13 @@
                 </ul>
               </nav>
               <address class="contacts header__contacts">
-                <a href="+78009039090" class="contacts__phone header__phone">8 800 903 90 90
-                  
+                <div class="contacts__icon">
+                  <svg class="contacts__pic">
+                    <use xlink:href="./img/svg/sprite.svg#phone"></use>
+                  </svg>
+                </div>
+                <a href="+78009039090" class="contacts__phone-number header__phone-number">8 800 903 90 90
+
                 </a>
               </address>
               <a href="#" class="hamburger">
@@ -69,17 +74,32 @@
             </div>
             <ul class="hero__bullet bullet__list">
               <li class="bullet__item">
-                <img src="./img/bullet/sheet.png" alt="sheet" class="bullet__pic">
+                <div class="bullet__icon">
+                  <!-- <img src="./img/bullet/sheet.png" alt="sheet" class="bullet__pic"> -->
+                  <svg class="bullet__pic">
+                    <use xlink:href="./img/svg/sprite.svg#sheet"></use>
+                  </svg>
+                </div>
                 <div class="bullet__text">100% натуральный продукт
                 </div>
               </li>
               <li class="bullet__item">
-                <img src="./img/bullet/delivery.png" alt="delivery" class="bullet__pic">
+                <div class="bullet__icon">
+                  <!-- <img src="./img/bullet/delivery.png" alt="delivery" class="bullet__pic"> -->
+                  <svg class="bullet__pic">
+                    <use xlink:href="./img/svg/sprite.svg#delivery"></use>
+                  </svg>
+                </div>
                 <div class="bullet__text">3-5 дней доставка по РФ
                 </div>
               </li>
               <li class="bullet__item">
-                <img src="./img/bullet/centimeter.png" alt="centimeter" class="bullet__pic">
+                <div class="bullet__icon">
+                  <!-- <img src="./img/bullet/centimeter.png" alt="centimeter" class="bullet__pic"> -->
+                  <svg class="bullet__pic">
+                    <use xlink:href="./img/svg/sprite.svg#centimeter"></use>
+                  </svg>
+                </div>
                 <div class="bullet__text">Не портит фигуру
                 </div>
               </li>
@@ -101,7 +121,10 @@
             <ul class="features__list">
               <li class="features__cards card">
                 <div class="card__icon">
-                  <img src="./img/features/man.png" class="card__item" alt="man">
+                  <!-- <img src="./img/features/man.png" class="card__item" alt="man"> -->
+                  <svg class="card__pic">
+                    <use xlink:href="./img/svg/sprite.svg#man"></use>
+                  </svg>
                 </div>
                 <div class="card__content">
                   <h3 class="card__title">Полезно</h3>
@@ -112,7 +135,10 @@
               </li>
               <li class="features__cards card">
                 <div class="card__icon">
-                  <img src="./img/features/smile.png" class="card__item" alt="smile">
+                  <!-- <img src="./img/features/smile.png" class="card__item" alt="smile"> -->
+                  <svg class="card__pic">
+                    <use xlink:href="./img/svg/sprite.svg#smile"></use>
+                  </svg>
                 </div>
                 <div class="card__content">
                   <h3 class="card__title">Вкусно</h3>
@@ -123,7 +149,10 @@
               </li>
               <li class="features__cards card">
                 <div class="card__icon">
-                  <img src="./img/features/hand.png" class="card__item" alt="hand">
+                  <!-- <img src="./img/features/hand.png" class="card__item" alt="hand"> -->
+                  <svg class="card__pic">
+                    <use xlink:href="./img/svg/sprite.svg#hand"></use>
+                  </svg>
                 </div>
                 <div class="card__content">
                   <h3 class="card__title">Питательно</h3>
@@ -146,7 +175,12 @@
               <div class="shop__block">
                 <div class="shop__detail dropdown">
                   <button class="short__button">
-                    <img src="./img/shop-candy.png" alt="candy" class="button__candy">
+                    <div class="button__icon">
+                      <!-- <img src="./img/shop-candy.png" alt="candy" class="button__candy"> -->
+                      <svg class="button__pic">
+                        <use xlink:href="./img/svg/sprite.svg#shop-candy"></use>
+                      </svg>
+                    </div>
                     <div class="button__name">Состав</div>
                   </button>
                   <table class="dropdown__menu">
@@ -326,46 +360,76 @@
 
               </div>
 
-
             </form>
           </div>
+        </section>
+
+        <section class="section map">
+          <footer class="footer">
+            <div class="container footer-container">
+              <div class="footer__col">
+                <address class="contacts footer__contacts">
+                  <div class="footer__text">Москва, ул.Новый Арбат, д.31/12
+                  </div>
+                  <div class="contacts__item">
+                    <div class="contacts__icon footer__icon">
+                      <svg class="contacts__pic contacts__pic--green">
+                        <use xlink:href="./img/svg/sprite.svg#phone"></use>
+                      </svg>
+                    </div>
+                    <a href="+78009039090" class="contacts__phone-number footer__phone-number">8 800 903 90 90</a>
+                  </div>
+                </address>
+              </div>
+              <div class="footer__col footer__col--alight--right">
+                <ul class="socials footer__socials">
+                  <li class="socials__item">
+                    <a href="#" class="socials__link socials__link--vk">
+                      <div class="socials__icon">
+                        <svg class="socials__pic">
+                          <use xlink:href="./img/svg/sprite.svg#vk"></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="socials__item">
+                    <a href="#" class="socials__link socials__link--facebook">
+                      <div class="socials__icon">
+                        <svg class="socials__pic">
+                          <use xlink:href="./img/svg/sprite.svg#facebook"></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="socials__item">
+                    <a href="#" class="socials__link socials__link--inst">
+                      <div class="socials__icon">
+                        <svg class="socials__pic">
+                          <use xlink:href="./img/svg/sprite.svg#inst"></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="socials__item">
+                    <a href="#" class="socials__link socials__link--twitter">
+                      <div class="socials__icon">
+                        <svg class="socials__pic">
+                          <use xlink:href="./img/svg/sprite.svg#twitter"></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </footer>
         </section>
 
       </main>
 
     </div>
 
-    <footer class="footer">
-      <div class="container footer-container">
-        <div class="footer__col">
-          <address class="contacts footer__contacts">
-            <div class="footer__text">Москва, ул.Новый Арбат, д.31/12
-            </div>
-            <a href="+78009039090" class="contacts__phone contacts__phone--green">8 800 903 90 90</a>
-          </address>
-        </div>
-        <div class="footer__col footer__col--alight--right">
-          <ul class="socials footer__socials">
-            <li class="socials__item">
-              <a href="#" class="socials__link socials__link--vk">
-              </a>
-            </li>
-            <li class="socials__item">
-              <a href="#" class="socials__link socials__link--facebook">
-              </a>
-            </li>
-            <li class="socials__item">
-              <a href="#" class="socials__link socials__link--inst">
-              </a>
-            </li>
-            <li class="socials__item">
-              <a href="#" class="socials__link socials__link--twitter">
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
+    
   </div>
 
   <nav class="fixed-menu">

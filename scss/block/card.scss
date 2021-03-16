@@ -52,6 +52,7 @@
 
   @include phones {
     margin-right: rem(12px);
+    margin-bottom: 0;
   }
 
 
@@ -66,10 +67,10 @@
 //   }
 // }
 
-.card__item {
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+.card__pic {
+  width: rem(64px);
+  height: rem(69px);
+  fill: $black;
   position: absolute;
 }
 
@@ -80,7 +81,7 @@
 .card__text {
   text-align: center;
   color: #666666;
-  line-height: rem(22px);
+  line-height: 1.2;
 
   @include phones {
     text-align: start;

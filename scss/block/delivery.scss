@@ -5,7 +5,7 @@
   &:after {
     content: "";
     display: block;
-    background: url("../img/berry-bg/berry.png") right top no-repeat;
+    background: url("../img/berry-bg/berry.png") right top / contain no-repeat;
     position: absolute;
     width: rem(220px);
     height: rem(300px);
@@ -13,7 +13,7 @@
     right: 0;
 
     @include phones {
-      background: url("../img/berry-bg/berry-phone.png") right top no-repeat;
+      background: url("../img/berry-bg/berry-phone.png") right top / contain no-repeat;
       width: rem(110px);
       height: rem(156px);
       top: rem(-90px);
@@ -23,12 +23,7 @@
 
 
 .delivery-container {
-  padding: rem(24px) rem(0px) rem(138px);
   color: #365A49;
-
-  @include phones {
-    padding: rem(80px) rem(0px) rem(138px);
-  }
   
   &:after {
     content: "";

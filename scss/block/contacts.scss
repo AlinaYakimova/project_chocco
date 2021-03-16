@@ -5,40 +5,49 @@
   font-style: normal;
 }
 
-.contacts__handset {
-  margin-right: rem(6px);
-}
-
-.contacts__phone {
-  font-size: rem(22px);
-  margin-left: rem(18px);
-  position: relative;
-  white-space: nowrap;
-
-  
-  
-  &:before {
-    content: "";
-    background: url("../img/phone.png") center center no-repeat;
-    width: rem(15px);
-    height: rem(15px);
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: rem(8px);
-    left: rem(-18px);
-  }
-}
-
-.contacts__phone--green {
-  color: $green;
+.contacts__item {
   display: flex;
-  font-size: rem(21px);
-  position: relative;
-
   
-  &:before {
-    content: "";
-    background: url("../img/phone1.png") center center no-repeat;
+
+  // &:before {
+  //   content: "";
+  //   background: url("../img/phone1.png") center center no-repeat;
+  // }
+}
+
+.contacts__icon {
+  width: 14px;
+  height: 15px;
+  margin-right: 6px;
+  margin-bottom: 5px;
+}
+
+.contacts__pic {
+  max-width: 100%;
+  max-height: 100%;
+  fill: #fff;
+
+  &--green {
+    fill: $green;
   }
 }
+
+
+
+.contacts__phone-number {
+  font-size: rem(22px);
+  white-space: nowrap;
+  
+  // &:before {
+  //   content: "";
+  //   background: url("../img/phone.png") center center no-repeat;
+  //   width: rem(15px);
+  //   height: rem(15px);
+  //   display: flex;
+  //   align-items: center;
+  //   position: absolute;
+  //   top: rem(8px);
+  //   left: rem(-18px);
+  // }
+}
+

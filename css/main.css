@@ -349,6 +349,7 @@ html {
 @media screen and (max-width: 480px) {
   html {
     font-size: 16px;
+    font-size: 2vmax;
   }
 }
 
@@ -475,6 +476,11 @@ h1 {
     line-height: 3.2222222222rem;
   }
 }
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2.2222222222rem;
+  }
+}
 
 h2 {
   font-size: 2rem;
@@ -531,7 +537,7 @@ ul li {
   padding: 1.3333333333rem 0rem 2.7777777778rem;
   position: relative;
   justify-content: space-between;
-  background: url("../img/bg_hero/chocolate_1.png") right 13% center/45% no-repeat;
+  background: url("../img/bg_hero/chocolate_1.png") right center/51% no-repeat;
 }
 @media screen and (max-width: 768px) {
   .hero-container {
@@ -591,14 +597,13 @@ ul li {
     display: block;
     width: 100%;
     height: 51%;
-    background: url("../img/bg_hero/chocolate.png") center center no-repeat;
+    background: url("../img/bg_hero/chocolate.png") center center/contain no-repeat;
   }
 }
 @media screen and (max-width: 480px) {
   .hero__content::before {
-    content: "";
     height: 55%;
-    background: url("../../img/bg_hero/chocolate-phone.png") center center no-repeat;
+    flex-shrink: 0;
   }
 }
 
@@ -617,12 +622,7 @@ ul li {
 }
 @media screen and (max-width: 768px) {
   .hero__text {
-    padding: 0 26%;
-  }
-}
-@media screen and (max-width: 480px) {
-  .hero__text {
-    padding: 0 15%;
+    max-width: 371px;
   }
 }
 
@@ -704,37 +704,29 @@ ul li {
   font-style: normal;
 }
 
-.contacts__handset {
-  margin-right: 0.3333333333rem;
+.contacts__item {
+  display: flex;
 }
 
-.contacts__phone {
+.contacts__icon {
+  width: 14px;
+  height: 15px;
+  margin-right: 6px;
+  margin-bottom: 5px;
+}
+
+.contacts__pic {
+  max-width: 100%;
+  max-height: 100%;
+  fill: #fff;
+}
+.contacts__pic--green {
+  fill: #497870;
+}
+
+.contacts__phone-number {
   font-size: 1.2222222222rem;
-  margin-left: 1rem;
-  position: relative;
   white-space: nowrap;
-}
-.contacts__phone:before {
-  content: "";
-  background: url("../img/phone.png") center center no-repeat;
-  width: 0.8333333333rem;
-  height: 0.8333333333rem;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  top: 0.4444444444rem;
-  left: -1rem;
-}
-
-.contacts__phone--green {
-  color: #497870;
-  display: flex;
-  font-size: 1.1666666667rem;
-  position: relative;
-}
-.contacts__phone--green:before {
-  content: "";
-  background: url("../img/phone1.png") center center no-repeat;
 }
 
 .common__button {
@@ -746,7 +738,7 @@ ul li {
   color: #365A49;
   font-weight: 800;
   padding: 1.1666666667rem 2.2777777778rem;
-  border-radius: 5.5555555556rem;
+  border-radius: 100px;
   text-transform: uppercase;
   transform: 0.3s;
 }
@@ -798,9 +790,16 @@ ul li {
   margin-right: 0;
 }
 
-.bullet__pic {
-  width: 2.5rem;
+.bullet__icon {
+  width: 2.1666666667rem;
+  height: 2.0555555556rem;
   margin-right: 0.6666666667rem;
+}
+
+.bullet__pic {
+  max-width: 100%;
+  max-height: 100%;
+  fill: #C6F7FF;
 }
 
 .bullet__text {
@@ -845,7 +844,6 @@ ul li {
 }
 @media screen and (max-width: 480px) {
   .features__container {
-    justify-content: flex-start;
     padding: 2.7777777778rem 0rem;
   }
 }
@@ -873,8 +871,8 @@ ul li {
 }
 @media screen and (max-width: 480px) {
   .features__text {
-    padding: 0 5%;
-    line-height: 1.1111111111rem;
+    padding: 0;
+    line-height: 1.1;
   }
 }
 .features__list {
@@ -892,6 +890,11 @@ ul li {
 @media screen and (max-width: 768px) {
   .features__cards {
     width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .features__cards {
+    margin-bottom: 2.3888888889rem;
   }
 }
 
@@ -949,13 +952,14 @@ ul li {
 @media screen and (max-width: 480px) {
   .card__icon {
     margin-right: 0.6666666667rem;
+    margin-bottom: 0;
   }
 }
 
-.card__item {
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+.card__pic {
+  width: 3.5555555556rem;
+  height: 3.8333333333rem;
+  fill: #292929;
   position: absolute;
 }
 
@@ -966,7 +970,7 @@ ul li {
 .card__text {
   text-align: center;
   color: #666666;
-  line-height: 1.2222222222rem;
+  line-height: 1.2;
 }
 @media screen and (max-width: 480px) {
   .card__text {
@@ -997,12 +1001,21 @@ ul li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background: #86C3D7;
   border-radius: 0.2222222222rem;
   width: 5.0555555556rem;
   height: 5.0555555556rem;
   margin-bottom: 1.2777777778rem;
+  padding: 0.6666666667rem 1.2222222222rem;
+}
+
+.button__icon {
+  display: flex;
+  align-items: center;
+  width: 2.5555555556rem;
+  height: 2.5555555556rem;
+  fill: #fff;
 }
 
 .button__name {
@@ -1044,7 +1057,7 @@ ul li {
   content: "";
   display: block;
   position: absolute;
-  background: url("../img/berry-bg/berry_mix.png") left bottom 46% no-repeat, url("../img/feedback/leaf3.png") left bottom no-repeat;
+  background: url("../img/berry-bg/berry_mix.png") left bottom 46%/contain no-repeat, url("../img/feedback/leaf3.png") left bottom/contain no-repeat;
   z-index: 1;
   width: 8.3333333333rem;
   height: 19.4444444444rem;
@@ -1053,7 +1066,6 @@ ul li {
 }
 @media screen and (max-width: 480px) {
   .feedback:before {
-    background: url("../img/berry-bg/berry_mix-phone.png") left bottom 46% no-repeat, url("../img/feedback/leaf3-phone.png") left bottom no-repeat;
     width: 6.7777777778rem;
     height: 14.4444444444rem;
     bottom: -6.3333333333rem;
@@ -1062,7 +1074,7 @@ ul li {
 .feedback:after {
   content: "";
   display: block;
-  background: url("../img/berry-bg/berry_6.png") right top no-repeat;
+  background: url("../img/berry-bg/berry_6.png") right top/contain no-repeat;
   position: absolute;
   width: 8.3333333333rem;
   height: 5rem;
@@ -1102,7 +1114,7 @@ ul li {
 }
 .feedback__card {
   display: flex;
-  background: url("../img/feedback/bush.png") right top 15% no-repeat;
+  background: url("../img/feedback/bush.png") right top 15%/130px no-repeat;
   background-color: #F8FAF9;
   width: 100%;
   min-height: 19.3333333333rem;
@@ -1148,6 +1160,7 @@ ul li {
   .feedback__elem {
     width: 7.2222222222rem;
     height: 7.2222222222rem;
+    margin-right: 0;
   }
 }
 .feedback__comment {
@@ -1159,7 +1172,7 @@ ul li {
   margin-bottom: 0.6666666667rem;
 }
 .feedback__text {
-  line-height: 1.2222222222rem;
+  line-height: 1;
   color: #666;
   margin-bottom: 1.3888888889rem;
   max-width: 24.7222222222rem;
@@ -1185,10 +1198,11 @@ ul li {
   height: 4.1111111111rem;
   border-radius: 50%;
   overflow: hidden;
-  border: 0.2222222222rem solid transparent;
+  border: 4px solid transparent;
 }
 .feedback__link:hover {
-  border: 0.2222222222rem solid #365A49;
+  border-radius: 50%;
+  border: 4px solid #365A49;
 }
 .feedback__icon {
   width: 100%;
@@ -1203,7 +1217,7 @@ ul li {
 .delivery:after {
   content: "";
   display: block;
-  background: url("../img/berry-bg/berry.png") right top no-repeat;
+  background: url("../img/berry-bg/berry.png") right top/contain no-repeat;
   position: absolute;
   width: 12.2222222222rem;
   height: 16.6666666667rem;
@@ -1212,7 +1226,7 @@ ul li {
 }
 @media screen and (max-width: 480px) {
   .delivery:after {
-    background: url("../img/berry-bg/berry-phone.png") right top no-repeat;
+    background: url("../img/berry-bg/berry-phone.png") right top/contain no-repeat;
     width: 6.1111111111rem;
     height: 8.6666666667rem;
     top: -5rem;
@@ -1220,13 +1234,7 @@ ul li {
 }
 
 .delivery-container {
-  padding: 1.3333333333rem 0rem 7.6666666667rem;
   color: #365A49;
-}
-@media screen and (max-width: 480px) {
-  .delivery-container {
-    padding: 4.4444444444rem 0rem 7.6666666667rem;
-  }
 }
 .delivery-container:after {
   content: "";
@@ -1275,12 +1283,8 @@ ul li {
 @media screen and (max-width: 768px) {
   .form {
     flex-direction: column;
-    padding: 0 18%;
-  }
-}
-@media screen and (max-width: 480px) {
-  .form {
-    padding: 0;
+    max-width: 466px;
+    margin: 0 auto;
   }
 }
 
@@ -1404,16 +1408,30 @@ ul li {
   transform: translate(-50%, -50%);
 }
 
+.footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+}
+
 .footer-container {
-  min-height: 5rem;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  padding: 0.9444444444rem 1.0555555556rem;
+}
+@media screen and (max-width: 768px) {
+  .footer-container {
+    padding: 1.5555555556rem 1.6666666667rem;
+  }
 }
 @media screen and (max-width: 480px) {
   .footer-container {
     flex-direction: column;
     align-items: center;
+    padding: 1.1111111111rem 5rem 1.9444444444rem;
   }
 }
 
@@ -1435,8 +1453,17 @@ ul li {
   align-items: start;
 }
 
+.footer__icon {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
 .footer__text {
   color: #292929;
+  font-size: 1.1666666667rem;
+}
+
+.footer__phone-number {
   font-size: 1.1666666667rem;
 }
 
@@ -1458,25 +1485,16 @@ ul li {
   transition: .3s;
   position: relative;
 }
-.socials__link--vk:after {
-  content: "";
-  position: absolute;
-  background: url("../img/socials/vk.png") center center no-repeat;
+
+.socials__icon {
+  display: flex;
+  align-items: center;
+  width: 1.1111111111rem;
+  height: 1.1111111111rem;
+  fill: #B3B3B3;
 }
-.socials__link--facebook:after {
-  content: "";
-  position: absolute;
-  background: url("../img/socials/facebook.png") center center no-repeat;
-}
-.socials__link--inst:after {
-  content: "";
-  position: absolute;
-  background: url("../img/socials/inst.png") center center no-repeat;
-}
-.socials__link--twitter:after {
-  content: "";
-  position: absolute;
-  background: url("../img/socials/twitter.png") center center no-repeat;
+.socials__icon:hover {
+  fill: #292929;
 }
 
 .fixed-menu {
@@ -1512,6 +1530,11 @@ ul li {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.map {
+  position: relative;
+  background: url("../img/map.png") center center/cover no-repeat;
 }
 
 /*# sourceMappingURL=main.css.map */

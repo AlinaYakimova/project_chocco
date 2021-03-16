@@ -32,7 +32,6 @@
     padding: rem(100px) rem(0px);
 
     @include phones {
-      justify-content: flex-start;
       padding: rem(50px) rem(0px);
     }
   }
@@ -61,8 +60,8 @@
     }
 
     @include phones {
-      padding: 0 5%;
-      line-height: rem(20px);
+      padding: 0;
+      line-height: 1.1;
     }
   }
 
@@ -80,6 +79,10 @@
 
     @include tablets {
       width: 100%;
+    }
+
+    @include phones {
+      margin-bottom: rem(43px);
     }
   }
 }
