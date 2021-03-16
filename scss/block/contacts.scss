@@ -3,6 +3,9 @@
   align-items: center;
   position: relative;
   font-style: normal;
+
+  @include tablets {
+    display: none;
 }
 
 .contacts__item {
@@ -20,6 +23,11 @@
   height: 15px;
   margin-right: 6px;
   margin-bottom: 5px;
+
+  @include phones {
+    width: 12px;
+    height: 12px;
+  }
 }
 
 .contacts__pic {
@@ -49,5 +57,10 @@
   //   top: rem(8px);
   //   left: rem(-18px);
   // }
+
+
 }
+}
+
+
 
