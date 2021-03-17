@@ -710,6 +710,7 @@ ul li {
 }
 .contacts .contacts__item {
   display: flex;
+  align-items: center;
 }
 .contacts .contacts__icon {
   width: 14px;
@@ -747,6 +748,7 @@ ul li {
   padding: 1.1666666667rem 2.2777777778rem;
   border-radius: 100px;
   text-transform: uppercase;
+  outline: none;
   transform: 0.3s;
 }
 .common__button:hover {
@@ -1472,7 +1474,6 @@ ul li {
 @media screen and (max-width: 480px) {
   .footer__icon {
     margin-top: 0;
-    margin-bottom: 5px;
   }
 }
 
