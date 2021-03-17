@@ -46,15 +46,6 @@
   }
 }
 
-.footer__icon {
-  margin-top: 5px;
-  margin-bottom: 0;
-
-  @include phones {
-    margin-top: 0;
-  }
-}
-
 .footer__text {
   color: $black;
   font-size: rem(21px);

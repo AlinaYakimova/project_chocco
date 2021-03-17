@@ -1467,16 +1467,6 @@ ul li {
   }
 }
 
-.footer__icon {
-  margin-top: 5px;
-  margin-bottom: 0;
-}
-@media screen and (max-width: 480px) {
-  .footer__icon {
-    margin-top: 0;
-  }
-}
-
 .footer__text {
   color: #292929;
   font-size: 1.1666666667rem;
