@@ -10,16 +10,16 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  padding: rem(17px) rem(19px);
+  padding: rem(17px) 0;
 
   @include tablets {
-    padding: rem(28px) rem(30px);
+    padding: rem(28px) 0;
   }
 
   @include phones {
     flex-direction: column;
     align-items: center;
-    padding: rem(20px) rem(90px) rem(35px);
+    padding: rem(20px) 0 rem(35px);
   }
 }
 
@@ -28,7 +28,7 @@
   justify-content: space-between;
   align-items: center;
   flex: 1;
-  padding: rem(18px) rem(0px);
+  padding: rem(18px) 0px;
   
   &--alight--right {
     display: flex;
