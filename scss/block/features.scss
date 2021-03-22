@@ -22,6 +22,7 @@
     background: url("../img/berry-bg/berry_1.png") center/contain no-repeat;
     left: 0;
     bottom: rem(-107px);
+    z-index: 1;
 
     @include phones {
       display: none;

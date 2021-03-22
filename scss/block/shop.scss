@@ -1,18 +1,163 @@
-.shop {
-  background: #F8FAF9;
+.shop-section {
+  background-color: #F8FAF9;
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: url("../img/berry-bg/berry_2.png")left bottom 46% / contain no-repeat,
+      url("../img/shop/leaf-bg.png") left bottom / contain no-repeat;
+    z-index: 1;
+    width: rem(200px);
+    height: rem(460px);
+    right: 0;
+    bottom: rem(-250px);
+  }
+}
+
+.shop-slider {
+  display: flex;
+  padding: rem(66px) rem(0px) rem(110px);
+  position: relative;
+}
+
+.shop-slider__arrow--left {
+  width: rem(25px);
+  height: rem(25px);
+  border-top: 3px solid #000;
+  border-left: 3px solid #000;
+  transform: rotate(-45deg);
+  border-radius: 2px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  cursor: pointer;
+}
+
+.shop-slider__arrow--right {
+  width: rem(25px);
+  height: rem(25px);
+  border-right: 3px solid #000;
+  border-bottom: 3px solid #000;
+  transform: rotate(-45deg);
+  border-radius: 2px;
+  position: absolute;
+  top: 50%;
+  right: rem(-20px);
+  cursor: pointer;
 }
 
 .shop__content {
   display: flex;
-  padding: rem(66px) rem(0px) rem(110px);
+  // padding: rem(66px) rem(0px) rem(110px);
+
+  @include tablets {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: rem(126px);
+
+    // &::before {
+    //   content: "";
+    //   display: block;
+    //   width: 100%;
+    //   background: url("../../img/shop/granola-grape-tablets.png") center center / contain no-repeat;
+    // }
+  }
+
+  @include phones {
+    padding-top: rem(40px);
+  }
 }
 
 .shop__block {
   display: flex;
   flex-direction: column;
+  flex: 0.8;
+  margin-right: rem(44px);
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include tablets {
+    text-align: center;
+  }
+}
+
+.shop__block--left {
+  width: 100%;
+  max-height: rem(470px); 
   flex: 1;
+
+  @include tablets {
+    width: 70%;
+  }
+}
+
+
+
+.shop__detail {
+  margin-bottom: rem(23px);
 }
 
 .shop__title {
-  margin-bottom: rem(23px);
+  margin-bottom: rem(24px);
+}
+
+.shop__text {
+  margin-bottom: rem(24px);
+
+  @include tablets {
+    padding: 0 15%;
+  }
+
+  @include phones {
+    padding: 0 9%;
+  }
+}
+
+.shop__elem {
+  display: flex;
+  margin-bottom: rem(24px);
+  align-items: flex-start;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include tablets {
+    justify-content: center;
+  }
+}
+
+.shop__list {
+  display: flex;
+  flex-direction: column;
+  margin-right: rem(44px);
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include tablets {
+    align-items: flex-start;
+  }
+}
+
+.shop__item--bold {
+  color: #000;
+}
+
+.shop__price {
+  font-size: rem(60px);
+  font-weight: 300;
+  line-height: 1;
+  color: #151515;
+  min-width: rem(148px);
 }

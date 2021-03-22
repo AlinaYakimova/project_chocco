@@ -22,7 +22,7 @@
               <a href="/" class="header__logo logo">
                 <img src="./img/logo/logo.png" alt="chocco" class="logo__pic">
               </a>
-              <nav class="menu">
+              <nav class="menu header__menu">
                 <ul class="menu__list">
                   <li class="menu__item">
                     <a href="#" class="menu__link">О нас</a>
@@ -57,10 +57,16 @@
 
                 </a>
               </address>
-              <a href="#" class="hamburger">
+              <!-- <a href="#" class="hamburger">
                 <span class="hamburger__plank"></span>
                 <span class="hamburger__plank"></span>
                 <span class="hamburger__plank"></span>
+
+              </a> -->
+              <a class="hamburger hamburger--collapse is-active" type="button">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
               </a>
             </header>
             <div class="hero__content">
@@ -166,83 +172,136 @@
 
         </section>
 
-        <section class="section shop">
+        <section class="section shop-section">
           <div class="container">
-            <div class="shop__content">
-              <div class="shop__block">
-                <img src="#" alt="candy-bar-grape" class="shop__pic">
+            <div class="shop-slider">
+              <div class="shop-slider__arrows">
+                <a href="#" class="shop-slider__arrow--left"></a>
+                <a href="#" class="shop-slider__arrow--right"></a>
               </div>
-              <div class="shop__block">
-                <div class="shop__detail dropdown">
-                  <button class="short__button">
-                    <div class="button__icon">
-                      <!-- <img src="./img/shop-candy.png" alt="candy" class="button__candy"> -->
-                      <svg class="button__pic">
-                        <use xlink:href="./img/svg/sprite.svg#shop-candy"></use>
-                      </svg>
-                    </div>
-                    <div class="button__name">Состав</div>
-                  </button>
-                  <table class="dropdown__menu">
-                    <tr class="dropdown__list">
-                      <td class="dropdown__col1"> <img src="#" alt="виноград"> </td>
-                      <td class="dropdown__col2">Виноград</td>
-                      <td class="dropdown__col3">25 г</td>
-                    </tr>
-                    <tr class="dropdown__list">
-                      <td class="dropdown__col1"> <img src="#" alt="орех"> </td>
-                      <td class="dropdown__col2">Грецкий орех</td>
-                      <td class="dropdown__col3">32 г</td>
-                    </tr>
-                    <tr class="dropdown__list">
-                      <td class="dropdown__col1"> <img src="#" alt="кунжут"> </td>
-                      <td class="dropdown__col2">Кунжутное семя</td>
-                      <td class="dropdown__col3">20 г</td>
-                    </tr>
-                    <tr class="dropdown__list">
-                      <td class="dropdown__col1"> <img src="#" alt="Сухое молоко"> </td>
-                      <td class="dropdown__col2">Сухое молоко</td>
-                      <td class="dropdown__col3">10 г</td>
-                    </tr>
-                    <tr class="dropdown__list">
-                      <td class="dropdown__col1"> <img src="#" alt="Зам. сахара"> </td>
-                      <td class="dropdown__col2">Зам. сахара</td>
-                      <td class="dropdown__col3">4 г</td>
-                    </tr>
-                    <tr class="dropdown__list">
-                      <td class="dropdown__col1"> <img src="#" alt="Какао бобы"> </td>
-                      <td class="dropdown__col2">Какао бобы</td>
-                      <td class="dropdown__col3">4 г</td>
-                    </tr>
-                  </table>
+              <div class="shop__content">
+                <div class="shop__block shop__block--left">
+                  <img src="./img/shop/granola-grape.png" alt="candy-bar-grape" class="shop__pic">
                 </div>
-                <div class="shop__detail">
-                  <h2 class="shop__title">Батончик “Гранола виноград”</h2>
-                  <div class="shop__item">
-                    <div class="shop__text">Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также
-                      входят:
-                      сухое молоко, заменитель сахара и какао бобы.
-                    </div>
-                    <div class="shop__col">
-                      <div class="shop__calorie">Калорийность</div>
-                      <div class="shop__calorie--bold">110 ккал</div>
-                    </div>
-                    <div class="shop__col">
-                      <div class="shop__mass">Вес</div>
-                      <div class="shop__mass--bold">95 грамм</div>
-                    </div>
-                    <div class="shop__price">140 ₽</div>
-                    <a href="#" class="shop__button common__button">заказать</a>
+                <div class="shop__block shop__block--right">
+                  <div class="shop__detail dropdown">
+                    <button class="short__button ">
+                      <div class="button__icon">
+                        <!-- <img src="./img/shop-candy.png" alt="candy" class="button__candy"> -->
+                        <svg class="button__pic">
+                          <use xlink:href="./img/svg/sprite.svg#shop-candy"></use>
+                        </svg>
+                      </div>
+                      <div class="button__name">Состав</div>
+                    </button>
+                    <table class="dropdown__menu">
+                      <tr class="dropdown__list">
+                        <td class="dropdown__col1">
+                          <div class="dropdown__icon">
+                            <svg class="dropdown__pic">
+                              <use xlink:href="./img/svg/sprite.svg#grape"></use>
+                            </svg>
+                          </div> 
+                        </td>
+                        <td class="dropdown__col2">Виноград</td>
+                        <td class="dropdown__col3">25 г</td>
+                      </tr>
+                      <tr class="dropdown__list">
+                        <td class="dropdown__col1">
+                          <div class="dropdown__icon">
+                            <svg class="dropdown__pic">
+                              <use xlink:href="./img/svg/sprite.svg#nut"></use>
+                            </svg>
+                          </div> 
+                        </td>
+                        <td class="dropdown__col2">Грецкий орех</td>
+                        <td class="dropdown__col3">32 г</td>
+                      </tr>
+                      <tr class="dropdown__list">
+                        <td class="dropdown__col1">
+                          <div class="dropdown__icon">
+                            <svg class="dropdown__pic">
+                              <use xlink:href="./img/svg/sprite.svg#almond"></use>
+                            </svg>
+                          </div> 
+                        </td>
+                        <td class="dropdown__col2">Кунжутное семя</td>
+                        <td class="dropdown__col3">20 г</td>
+                      </tr>
+                      <tr class="dropdown__list">
+                        <td class="dropdown__col1">
+                          <div class="dropdown__icon">
+                            <svg class="dropdown__pic">
+                              <use xlink:href="./img/svg/sprite.svg#milk"></use>
+                            </svg>
+                          </div> 
+                         </td>
+                        <td class="dropdown__col2">Сухое молоко</td>
+                        <td class="dropdown__col3">10 г</td>
+                      </tr>
+                      <tr class="dropdown__list">
+                        <td class="dropdown__col1">
+                          <div class="dropdown__icon">
+                            <svg class="dropdown__pic">
+                              <use xlink:href="./img/svg/sprite.svg#honey"></use>
+                            </svg>
+                          </div> 
+                         </td>
+                        <td class="dropdown__col2">Зам. сахара</td>
+                        <td class="dropdown__col3">4 г</td>
+                      </tr>
+                      <tr class="dropdown__list">
+                        <td class="dropdown__col1">
+                          <div class="dropdown__icon">
+                            <svg class="dropdown__pic">
+                              <use xlink:href="./img/svg/sprite.svg#cocoa-beans"></use>
+                            </svg>
+                          </div> 
+                        </td>
+                        <td class="dropdown__col2">Какао бобы</td>
+                        <td class="dropdown__col3">4 г</td>
+                      </tr>
+                    </table>
                   </div>
+                  <div class="shop__detail">
+                    <h2 class="shop__title">Батончик “Гранола виноград”</h2>
+                    <div class="shop__box">
+                      <div class="shop__text">Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также
+                        входят:
+                        сухое молоко, заменитель сахара и какао бобы.
+                      </div>
+                      <div class="shop__elem">
+                        <ul class="shop__list">
+                          <li class="shop__item">Калорийность</li>
+                          <li class="shop__item"><b class="shop__item--bold">110 ккал</b></li>
+                        </ul>
+                        <div class="shop__list">
+                          <div class="shop__item">Вес</div>
+                          <div class="shop__item"><b class="shop__item--bold">95 грамм</b></div>
+                        </div>
+                      </div>
+                      <div class="shop__elem">
+                        <div class="shop__price">140 ₽</div>
+                        <a href="#" class="common__button common__button--green">заказать</a>
+                      </div>
+                    </div>
+                  </div>
+  
+  
                 </div>
-
-
+  
               </div>
-
             </div>
+            
 
           </div>
 
+        </section>
+
+        <section class="section team">
+          <div class="container">
+
+          </div>
         </section>
 
         <section class="section feedback">
@@ -355,7 +414,8 @@
                 <div class="form__buttons">
                   <button type="submit" href="#" class="common__button common__button--green">заказать
                   </button>
-                  <button type="reset" href="#" class="common__button common__button--transparent">Очистить</button>
+                  <button type="reset" href="#" class="common__button common__button--transparent">Очистить                    
+                  </button>
                 </div>
 
               </div>
@@ -463,6 +523,37 @@
       </li>
     </ul>
   </nav>
+
+  <div class="fullscreen-menu fullscreen-menu--active">
+    <a href="#" class="fullscreen-menu__close">
+
+    </a>
+    <nav class="menu menu-vertical">
+      <ul class="menu__list menu-vertical__list">
+        <li class="menu-vertical__item">
+          <a href="#" class="menu__link">О нас</a>
+        </li>
+        <li class="menu-vertical__item">
+          <a href="#" class="menu__link">Батончики</a>
+        </li>
+        <li class="menu-vertical__item">
+          <a href="#" class="menu__link">Команда</a>
+        </li>
+        <li class="menu-vertical__item">
+          <a href="#" class="menu__link">Меню</a>
+        </li>
+        <li class="menu-vertical__item">
+          <a href="#" class="menu__link">Отзывы</a>
+        </li>
+        <li class="menu-vertical__item">
+          <a href="#" class="menu__link">Как мы работаем</a>
+        </li>
+        <li class="menu-vertical__item">
+          <a href="#" class="menu__link">Контакты </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 
   <!-- </div> -->
 </body>

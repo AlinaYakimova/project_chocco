@@ -9,6 +9,12 @@
   height: rem(91px);
   margin-bottom: rem(23px);
   padding: rem(12px) rem(22px);
+  outline: none;
+  position: relative;
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .button__icon {

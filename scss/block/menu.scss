@@ -1,8 +1,6 @@
 .menu {
   display: flex;
   align-items: center;
-  padding-top: 5px;
-  margin: 0 rem(27px);
 
   @include tablets {
     display: none;
@@ -26,4 +24,22 @@
 
 .menu__link {
   white-space: nowrap;
+}
+
+.menu-vertical {
+  color: #fff;
+
+  @include tablets {
+    display: flex;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__item {
+    margin-bottom: rem(50px);
+  }
 }
