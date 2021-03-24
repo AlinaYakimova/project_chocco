@@ -1123,43 +1123,86 @@ ul li {
   bottom: -13.8888888889rem;
 }
 
+.shop__sliders-wrap {
+  display: flex;
+  overflow: hidden;
+  max-width: 52.2222222222rem;
+}
+@media screen and (max-width: 768px) {
+  .shop__sliders-wrap {
+    max-width: 42.6666666667rem;
+  }
+}
+
 .shop-slider {
   display: flex;
   padding: 3.6666666667rem 0rem 6.1111111111rem;
   position: relative;
+  transition: right 1s;
+  will-change: right;
 }
 
 .shop-slider__arrow--left {
-  width: 1.3888888889rem;
-  height: 1.3888888889rem;
+  width: 1.1111111111rem;
+  height: 1.1111111111rem;
   border-top: 3px solid #000;
   border-left: 3px solid #000;
   transform: rotate(-45deg);
   border-radius: 2px;
   position: absolute;
-  top: 50%;
-  left: 0;
+  top: 47%;
+  left: -0.8888888889rem;
   cursor: pointer;
+  z-index: 10;
+}
+@media screen and (max-width: 768px) {
+  .shop-slider__arrow--left {
+    top: 26%;
+    left: 4.4444444444rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .shop-slider__arrow--left {
+    left: 1.1111111111rem;
+  }
 }
 
 .shop-slider__arrow--right {
-  width: 1.3888888889rem;
-  height: 1.3888888889rem;
+  width: 1.1111111111rem;
+  height: 1.1111111111rem;
   border-right: 3px solid #000;
   border-bottom: 3px solid #000;
   transform: rotate(-45deg);
   border-radius: 2px;
   position: absolute;
-  top: 50%;
-  right: -1.1111111111rem;
+  top: 47%;
+  right: -0.8888888889rem;
   cursor: pointer;
+  z-index: 10;
+}
+@media screen and (max-width: 768px) {
+  .shop-slider__arrow--right {
+    top: 26%;
+    right: 8.1111111111rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .shop-slider__arrow--right {
+    right: 1.1111111111rem;
+  }
 }
 
-.shop__content {
+.shop__sliders {
+  display: flex;
+  position: relative;
+  right: 0;
+}
+
+.shop__item {
   display: flex;
 }
 @media screen and (max-width: 768px) {
-  .shop__content {
+  .shop__item {
     width: 100%;
     flex: 1;
     display: flex;
@@ -1171,92 +1214,95 @@ ul li {
   }
 }
 @media screen and (max-width: 480px) {
-  .shop__content {
+  .shop__item {
     padding-top: 2.2222222222rem;
   }
 }
 
-.shop__block {
+.slide__block {
   display: flex;
   flex-direction: column;
-  flex: 0.8;
-  margin-right: 2.4444444444rem;
-}
-.shop__block:last-child {
-  margin-right: 0;
 }
 @media screen and (max-width: 768px) {
-  .shop__block {
+  .slide__block {
     text-align: center;
   }
 }
 
-.shop__block--left {
-  width: 100%;
-  max-height: 26.1111111111rem;
-  flex: 1;
+.slide__block--left {
+  margin-right: 2.4444444444rem;
+  margin-left: -2.7777777778rem;
+  padding-top: 1.6666666667rem;
 }
 @media screen and (max-width: 768px) {
-  .shop__block--left {
+  .slide__block--left {
+    width: 70%;
+    margin-left: 0;
+  }
+}
+
+.slide__block--right {
+  width: 38%;
+}
+@media screen and (max-width: 768px) {
+  .slide__block--right {
     width: 70%;
   }
 }
 
-.shop__detail {
+.slide__detail {
+  min-width: 21.1111111111rem;
+}
+
+.slide__title {
   margin-bottom: 1.2777777778rem;
 }
-
-.shop__title {
-  margin-bottom: 1.3333333333rem;
-}
-
-.shop__text {
-  margin-bottom: 1.3333333333rem;
-}
 @media screen and (max-width: 768px) {
-  .shop__text {
-    padding: 0 15%;
-  }
-}
-@media screen and (max-width: 480px) {
-  .shop__text {
-    padding: 0 9%;
+  .slide__title {
+    font-size: 1.6666666667rem;
+    line-height: 2rem;
   }
 }
 
-.shop__elem {
+.slide__text {
+  margin-bottom: 1.3333333333rem;
+  line-height: 1.2222222222rem;
+}
+
+.slide__elem {
   display: flex;
   margin-bottom: 1.3333333333rem;
+  line-height: 1.2222222222rem;
   align-items: flex-start;
 }
-.shop__elem:last-child {
+.slide__elem:last-child {
   margin-bottom: 0;
 }
 @media screen and (max-width: 768px) {
-  .shop__elem {
+  .slide__elem {
     justify-content: center;
   }
 }
 
-.shop__list {
+.slide__list {
   display: flex;
   flex-direction: column;
   margin-right: 2.4444444444rem;
 }
-.shop__list:last-child {
+.slide__list:last-child {
   margin-right: 0;
 }
 @media screen and (max-width: 768px) {
-  .shop__list {
+  .slide__list {
     align-items: flex-start;
   }
 }
 
-.shop__item--bold {
+.param__item--bold {
   color: #000;
 }
 
-.shop__price {
+.slide__price {
   font-size: 3.3333333333rem;
   font-weight: 300;
   line-height: 1;
@@ -1295,6 +1341,7 @@ ul li {
 .button__name {
   font-size: 0.7777777778rem;
   color: #fff;
+  text-transform: uppercase;
 }
 
 .dropdown {
