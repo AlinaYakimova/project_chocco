@@ -388,7 +388,6 @@ body {
   position: relative;
   flex-direction: column;
   margin: 0 auto;
-  z-index: 2;
 }
 
 .section {
@@ -517,9 +516,14 @@ ul li {
   list-style: none;
 }
 
+.body-active-menu {
+  overflow: hidden;
+}
+
 .hero {
   background: url("../img/bg_hero/leaf.png") right bottom no-repeat;
   background-color: #61C4D9;
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   .hero {
@@ -552,6 +556,7 @@ ul li {
   background: url("../img/leaf-bg/decor2.png") center center no-repeat;
   bottom: -6%;
   left: -5%;
+  z-index: 1;
 }
 @media screen and (max-width: 768px) {
   .hero-container::after {
@@ -566,6 +571,7 @@ ul li {
   background: url("../img/bg_hero/mix.png") right bottom no-repeat;
   bottom: -6%;
   right: -3.8888888889rem;
+  z-index: 1;
 }
 @media screen and (max-width: 768px) {
   .hero-container::before {
@@ -674,6 +680,7 @@ ul li {
   border: 0;
   margin: 0;
   overflow: visible;
+  z-index: 21;
 }
 @media screen and (max-width: 768px) {
   .hamburger {
@@ -682,11 +689,11 @@ ul li {
 }
 
 .hamburger:hover {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .hamburger.is-active:hover {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .hamburger.is-active .hamburger-inner,
@@ -711,7 +718,7 @@ ul li {
 .hamburger-inner,
 .hamburger-inner::before,
 .hamburger-inner::after {
-  width: 26px;
+  width: 1.4444444444rem;
   height: 4px;
   background-color: #fff;
   border-radius: 4px;
@@ -800,6 +807,9 @@ ul li {
 
 .menu-vertical {
   color: #fff;
+  font-size: 2rem;
+  line-height: 4rem;
+  padding: 7.5rem 0;
 }
 @media screen and (max-width: 768px) {
   .menu-vertical {
@@ -812,7 +822,7 @@ ul li {
   width: 100%;
 }
 .menu-vertical__item {
-  margin-bottom: 2.7777777778rem;
+  margin-bottom: 0.5555555556rem;
 }
 
 .contacts {
@@ -1881,10 +1891,21 @@ ul li {
 
 .fullscreen-menu {
   width: 100%;
-  min-height: 61.1111111111rem;
+  height: 100vh;
   text-align: center;
   padding: 0.8333333333rem;
   background: #313131;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  z-index: 20;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.fullscreen-menu--active {
+  opacity: 1;
+  left: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

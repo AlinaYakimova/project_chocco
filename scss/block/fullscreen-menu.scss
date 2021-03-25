@@ -1,9 +1,19 @@
 .fullscreen-menu {
   width: 100%;
-  min-height: rem(1100px);
+  height: 100vh;
   text-align: center;
   padding: rem(15px);
   background: #313131;
-  
-  
+  position: fixed;
+  top: 0;
+  left: -100%;
+  z-index: $z-fullscreen-menu;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.fullscreen-menu--active {
+  opacity: 1;
+  left: 0;
+
 }

@@ -1,6 +1,7 @@
 .hero {
   background: url("../img/bg_hero/leaf.png") right bottom no-repeat;
   background-color: $blue;
+  position: relative;
 
   @include tablets {
     background-position: right bottom 63%;
@@ -30,6 +31,7 @@
       background: url("../img/leaf-bg/decor2.png") center center no-repeat;
       bottom: -6%;
       left: -5%;
+      z-index: 1;
       
       @include tablets {
         display: none;
@@ -45,6 +47,7 @@
       background: url("../img/bg_hero/mix.png") right bottom no-repeat;
       bottom: -6%;
       right: rem(-70px);
+      z-index: 1;
 
       @include tablets {
         display: none;

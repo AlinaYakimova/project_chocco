@@ -16,7 +16,7 @@
 
 .menu__item {
   margin-right: rem(27px);
-  
+
   &:last-child {
     margin-right: 0;
   }
@@ -28,6 +28,9 @@
 
 .menu-vertical {
   color: #fff;
+  font-size: rem(36px);
+  line-height: rem(72px);
+  padding: rem(135px) 0;
 
   @include tablets {
     display: flex;
@@ -40,6 +43,6 @@
   }
 
   &__item {
-    margin-bottom: rem(50px);
+    margin-bottom: rem(10px);
   }
 }
