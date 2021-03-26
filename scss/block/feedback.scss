@@ -6,8 +6,8 @@
     content: "";
     display: block;
     position: absolute;
-    background: url("../img/berry-bg/berry_mix.png")left bottom 46% / contain no-repeat, 
-    url("../img/feedback/leaf3.png") left bottom / contain no-repeat;
+    background: url("../img/berry-bg/berry_mix.png")left bottom 46% / contain no-repeat,
+      url("../img/feedback/leaf3.png") left bottom / contain no-repeat;
     z-index: 1;
     width: rem(150px);
     height: rem(350px);
@@ -15,10 +15,10 @@
     bottom: rem(-150px);
 
     @include phones {
-     width: rem(122px);
-    height: rem(260px);
-    bottom: rem(-114px);
-  }
+      width: rem(122px);
+      height: rem(260px);
+      bottom: rem(-114px);
+    }
   }
 
   &:after {
@@ -51,7 +51,7 @@
     @include tablets {
       color: #000;
     }
-    
+
     @include phones {
       color: #000;
     }
@@ -63,16 +63,33 @@
     flex-wrap: wrap;
   }
 
-  &__card {
+  &__wrap {
     display: flex;
+    overflow: hidden;
+    max-width: rem(940px);
+  }
+
+  &__list {
+    width: 100%;
+    position: relative;
+    display: flex;
+    transition: right 1s;
+    will-change: right;
+    margin-bottom: rem(15px);
+
+  }
+
+  &__card {
     background: url("../img/feedback/bush.png") right top 15% / 130px no-repeat;
     background-color: #F8FAF9;
-    width: 100%;
     min-height: rem(348px);
     padding: rem(42px);
-    margin-bottom: rem(15px);
-    position: relative;
-    
+    display: flex;
+
+    &--active {
+      z-index: 2;
+    }
+
     @include tablets {
       display: flex;
       flex-direction: column;
@@ -102,9 +119,9 @@
   }
 
   &__elem {
-    width: rem(253px);
-    height: rem(264px);
-    max-width: 100%;
+    // width: rem(253px);
+    // height: rem(264px);
+    // max-width: 100%;
     margin-right: rem(40px);
 
     @include tablets {
@@ -118,6 +135,7 @@
     display: flex;
     flex-direction: column;
     padding-top: rem(28px);
+    width: 46%;
   }
 
   &__subtitle {
@@ -128,7 +146,6 @@
     line-height: 1;
     color: #666;
     margin-bottom: rem(25px);
-    max-width: rem(445px);
 
     @include tablets {
       max-width: none;
@@ -157,11 +174,12 @@
     border: 4px solid transparent;
 
 
-    &:hover {
+    &--active {
       border-radius: 50%;
       border: 4px solid #365A49;
     }
   }
+
   &__icon {
     width: 100%;
     height: 100%;

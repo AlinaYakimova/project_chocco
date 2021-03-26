@@ -1464,15 +1464,28 @@ ul li {
   flex-direction: column;
   flex-wrap: wrap;
 }
-.feedback__card {
+.feedback__wrap {
   display: flex;
+  overflow: hidden;
+  max-width: 52.2222222222rem;
+}
+.feedback__list {
+  width: 100%;
+  position: relative;
+  display: flex;
+  transition: right 1s;
+  will-change: right;
+  margin-bottom: 0.8333333333rem;
+}
+.feedback__card {
   background: url("../img/feedback/bush.png") right top 15%/130px no-repeat;
   background-color: #F8FAF9;
-  width: 100%;
   min-height: 19.3333333333rem;
   padding: 2.3333333333rem;
-  margin-bottom: 0.8333333333rem;
-  position: relative;
+  display: flex;
+}
+.feedback__card--active {
+  z-index: 2;
 }
 @media screen and (max-width: 768px) {
   .feedback__card {
@@ -1503,9 +1516,6 @@ ul li {
   }
 }
 .feedback__elem {
-  width: 14.0555555556rem;
-  height: 14.6666666667rem;
-  max-width: 100%;
   margin-right: 2.2222222222rem;
 }
 @media screen and (max-width: 768px) {
@@ -1519,6 +1529,7 @@ ul li {
   display: flex;
   flex-direction: column;
   padding-top: 1.5555555556rem;
+  width: 46%;
 }
 .feedback__subtitle {
   margin-bottom: 0.6666666667rem;
@@ -1527,7 +1538,6 @@ ul li {
   line-height: 1;
   color: #666;
   margin-bottom: 1.3888888889rem;
-  max-width: 24.7222222222rem;
 }
 @media screen and (max-width: 768px) {
   .feedback__text {
@@ -1552,7 +1562,7 @@ ul li {
   overflow: hidden;
   border: 4px solid transparent;
 }
-.feedback__link:hover {
+.feedback__link--active {
   border-radius: 50%;
   border: 4px solid #365A49;
 }
@@ -1669,12 +1679,15 @@ ul li {
 .form__comment {
   width: 100%;
   padding: 0.8888888889rem 0.6666666667rem;
-  border-radius: 0.2222222222rem;
-  border: solid 0.1666666667rem transparent;
+  border-radius: 4px;
+  border: 3px solid transparent;
+  outline: none;
 }
 .form__comment:focus {
   border-color: #DEE2BD;
-  outline: none;
+}
+.form__comment--error {
+  border: 1px solid red;
 }
 @media screen and (max-width: 768px) {
   .form__comment {
@@ -1690,6 +1703,10 @@ ul li {
   .form__comment--textarea {
     height: 4.7777777778rem;
   }
+}
+
+.form__error {
+  color: red;
 }
 
 .form__controls {

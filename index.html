@@ -266,7 +266,7 @@
                         </table>
                       </div>
                       <div class="slide__detail">
-                        <h2 class="slide__title">Батончик  “Гранола виноград”</h2>
+                        <h2 class="slide__title">Батончик “Гранола виноград”</h2>
                         <div class="slide__box">
                           <div class="slide__text">Гранола из винограда, грецкого ореха и кунжутных семечек. В состав
                             также
@@ -388,7 +388,8 @@
                       <div class="slide__detail">
                         <h2 class="slide__title">батончик “морские водоросли”</h2>
                         <div class="slide__box">
-                          <div class="slide__text">Гранола из морских водорослей с овсом, миндалем и тыквенными семечками. 
+                          <div class="slide__text">Гранола из морских водорослей с овсом, миндалем и тыквенными
+                            семечками.
                             В состав также входят: сухое молоко, заменитель сахара и какао бобы.
                           </div>
                           <div class="slide__elem">
@@ -437,23 +438,54 @@
           <div class="container feedback-container">
             <h1 class="feedback__title">отзывы</h1>
             <div class="feedback__content">
-              <div class="feedback__card">
-                <div class="feedback__elem">
-                  <img src="./img/feedback/ax.png" alt="" class="feedback__pic">
-                </div>
-                <div class="feedback__comment">
-                  <h3 class="feedback__subtitle">Лучший перекус</h3>
-                  <p class="feedback__text">Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В
-                    течение дня сижу за компьютером и часто отходить в кафе или на кухню просто не могу себе позволить.
-                    А батончик – он всегда под рукой. Это приятно и удобно.
-                  </p>
-                  <h4 class="feedback__name">Алёна Хмельницкая</h4>
-                </div>
+              <div class="feedback__wrap">
+                <ul class="feedback__list">
+                  <li class="feedback__card feedback__card--active">
+                    <div class="feedback__elem">
+                      <img src="./img/feedback/ax.png" alt="user" class="feedback__pic">
+                    </div>
+                    <div class="feedback__comment">
+                      <h3 class="feedback__subtitle">Лучший перекус</h3>
+                      <p class="feedback__text">Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В
+                        течение дня сижу за компьютером и часто отходить в кафе или на кухню просто не могу себе
+                        позволить.
+                        А батончик – он всегда под рукой. Это приятно и удобно.
+                      </p>
+                      <h4 class="feedback__name">Алёна Хмельницкая</h4>
+                    </div>
+                  </li>
+                  <li class="feedback__card">
+                    <div class="feedback__elem">
+                      <img src="./img/feedback/vg.png" alt="user" class="feedback__pic">
+                    </div>
+                    <div class="feedback__comment">
+                      <h3 class="feedback__subtitle">Идеально подходят для спортсменов</h3>
+                      <p class="feedback__text">После тренировок всегда хочется быстро закинуться чем-то белковым, потому что до дома ещё нужно доехать. А кушать хочется. Протеиновые батончики всегда выручают в этом плане. 
+                        Спасибо производителю за этот качественный и экологичный продукт. 
+                      </p>
+                      <h4 class="feedback__name">Вадим Грачев </h4>
+                    </div>
+                  </li>
+                  <li class="feedback__card">
+                    <div class="feedback__elem">
+                      <img src="./img/feedback/mo.png" alt="user" class="feedback__pic">
+                    </div>
+                    <div class="feedback__comment">
+                      <h3 class="feedback__subtitle">Лучшие батончики премиум уровня</h3>
+                      <p class="feedback__text">Батончики понравились. На мой взгляд слегка завышена цена по сравнению с конкурентами, однако, как говорится – оно того стоит. Нравится носить с собой, нравится держать в руке. Ну и конечно же, кушать. Идеально утоляют голод, хоть и не надолго. Через час уже ем ещё один. 
+                        Но это скорее плюс, чем минус.
+                      </p>
+                      <h4 class="feedback__name">Мария Орлова</h4>
+                    </div>
+                  </li>
+                </ul>
               </div>
+              
+
               <div class="feedback__user">
                 <ul class="feedback__list">
                   <li class="feedback__item">
-                    <a href="#" class="feedback__link">
+                    <a href="#" class="feedback__link feedback__link--active">
                       <img src="./img/feedback/ax.png" alt="user" class="feedback__icon">
                     </a>
                   </li>
@@ -481,11 +513,13 @@
                 <div class="form__row">
                   <label class="form__block">
                     <div class="form__title">Имя</div>
-                    <input type="text" class="form__comment">
+                    <input type="text" class="form__comment" name="name" required>
+                    <div class="form__error"></div>
                   </label>
                   <label class="form__block">
                     <div class="form__title">Телефон</div>
-                    <input type="text" class="form__comment">
+                    <input type="text" class="form__comment" name="phone" id="number-phone" required>
+                    <div class="form__error"></div>
                   </label>
                 </div>
                 <div class="form__row">
@@ -517,8 +551,9 @@
                 <div class="form__row">
                   <label class="form__block">
                     <div class="form__title">Комментарий</div>
-                    <textarea type="text" class="form__comment form__comment--textarea">
+                    <textarea type="text" class="form__comment form__comment--textarea" name="comment" required>
                     </textarea>
+                    <div class="form__error"></div>
                   </label>
                 </div>
                 <div class="form__controls">
@@ -541,7 +576,7 @@
                   </label>
                 </div>
                 <div class="form__buttons">
-                  <button type="submit" href="#" class="common__button common__button--green">заказать
+                  <button type="submit" href="#" class="common__button common__button--green" id="form-submit">заказать
                   </button>
                   <button type="reset" href="#" class="common__button common__button--transparent">Очистить
                   </button>
@@ -613,12 +648,8 @@
             </div>
           </footer>
         </section>
-
       </main>
-
     </div>
-
-
   </div>
 
   <nav class="fixed-menu">
@@ -686,6 +717,8 @@
 
   <script src="./shop-slider.js"></script>
   <script src="./fullscreen-menu.js"></script>
+  <script src="./feedback.js"></script>
+  <script src="./validateForm.js"></script>
 </body>
 
 </html>
