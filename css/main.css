@@ -1469,8 +1469,7 @@ ul li {
   overflow: hidden;
   max-width: 52.2222222222rem;
 }
-.feedback__list {
-  width: 100%;
+.feedback__list-card {
   position: relative;
   display: flex;
   transition: right 1s;
@@ -1483,6 +1482,7 @@ ul li {
   min-height: 19.3333333333rem;
   padding: 2.3333333333rem;
   display: flex;
+  position: relative;
 }
 .feedback__card--active {
   z-index: 2;
@@ -1504,6 +1504,7 @@ ul li {
   position: absolute;
   top: -16%;
   left: 50%;
+  transform: translate(-50%, 0);
 }
 @media screen and (max-width: 768px) {
   .feedback__card:after {
@@ -1516,6 +1517,9 @@ ul li {
   }
 }
 .feedback__elem {
+  width: 14.0555555556rem;
+  height: 14.6666666667rem;
+  max-width: 100%;
   margin-right: 2.2222222222rem;
 }
 @media screen and (max-width: 768px) {
@@ -1529,7 +1533,6 @@ ul li {
   display: flex;
   flex-direction: column;
   padding-top: 1.5555555556rem;
-  width: 46%;
 }
 .feedback__subtitle {
   margin-bottom: 0.6666666667rem;

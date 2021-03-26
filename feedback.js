@@ -1,7 +1,7 @@
 (function () {
   const buttons = document.querySelectorAll(".feedback__item");
   const card = document.querySelectorAll(".feedback__card");
-  const itemsList = document.querySelector(".feedback__list");
+  const itemsList = document.querySelector(".feedback__list-card");
   const computedStyles = window.getComputedStyle(itemsList);
   let step = setCurrentWidth();
   const maxRight = card.length * step;
@@ -13,7 +13,7 @@
     step = setCurrentWidth();
   });
 
-  buttons.forEach((e) => {
+  buttons.forEach((e, i) => {
     e.addEventListener("click", (e) => {
       changeSlide(e, "right");
     });

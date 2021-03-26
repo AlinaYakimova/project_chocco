@@ -69,8 +69,7 @@
     max-width: rem(940px);
   }
 
-  &__list {
-    width: 100%;
+  &__list-card {
     position: relative;
     display: flex;
     transition: right 1s;
@@ -85,6 +84,7 @@
     min-height: rem(348px);
     padding: rem(42px);
     display: flex;
+    position: relative;
 
     &--active {
       z-index: 2;
@@ -107,6 +107,7 @@
       position: absolute;
       top: -16%;
       left: 50%;
+      transform: translate(-50%, 0);
 
       @include tablets {
         left: 43%;
@@ -119,9 +120,9 @@
   }
 
   &__elem {
-    // width: rem(253px);
-    // height: rem(264px);
-    // max-width: 100%;
+    width: rem(253px);
+    height: rem(264px);
+    max-width: 100%;
     margin-right: rem(40px);
 
     @include tablets {
@@ -135,7 +136,7 @@
     display: flex;
     flex-direction: column;
     padding-top: rem(28px);
-    width: 46%;
+    // width: 46%;
   }
 
   &__subtitle {
