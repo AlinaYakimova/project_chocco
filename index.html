@@ -421,17 +421,95 @@
         </section>
 
         <section class="section team">
-          <div class="container">
-            <div class="team__title">команда</div>
+          <div class="container team-container">
+            <h1 class="team__title">команда</h1>
             <ul class="team__list">
-              <li class="team__item">
-                <div class="team__icon">
-                  <img src="" alt="" class="team__pic">
+              <li class="team__item member">
+                <div class="member__content">
+                  <img src="./img/team/team4.png" alt="" class="member__pic">
+                  <div class="member__name">
+                    <a href="#" class="member__name-link team-button">
+                      <div class="member__name-text">Борис Федорович</div>
+                      <div class="member__name-pic">
+                        <svg class="member__name-icon">
+                          <use xlink:href="./img/svg/sprite.svg#triangle-down"></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="member__desc team-dropdown">
+                    <div class="member__desc-subtitle">Главный технолог</div>
+                    <div class="member__desc-text">Отвечает за вкусовые качества 
+                      и калорийность.
+                      </div>
+                  </div>
                 </div>
               </li>
-            </ul>
-
-          </div>
+              <li class="team__item member">
+                <div class="member__content">
+                  <img src="./img/team/team1.png" alt="" class="member__pic">
+                  <div class="member__name">
+                    <a href="#" class="member__name-link team-button">
+                      <div class="member__name-text">Алла Иванова</div>
+                      <div class="member__name-pic">
+                        <svg class="member__name-icon">
+                          <use xlink:href="./img/svg/sprite.svg#triangle-down"></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="member__desc team-dropdown">
+                    <div class="member__desc-subtitle">Специалист по упаковке</div>
+                    <div class="member__desc-text">Автор запоминающегося стиля 
+                      наших батончиков.                      
+                      </div>
+                  </div>
+                </div>  
+              </li>
+              <li class="team__item member">
+                <div class="member__content">
+                  <img src="./img/team/team2.png" alt="" class="member__pic">
+                  <div class="member__name">
+                    <a href="#" class="member__name-link team-button">
+                      <div class="member__name-text">Кирилл Матросов</div>
+                      <div class="member__name-pic">
+                        <svg class="member__name-icon">
+                          <use xlink:href="./img/svg/sprite.svg#triangle-down"></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="member__desc team-dropdown">
+                    <div class="member__desc-subtitle">Оператор</div>
+                    <div class="member__desc-text">Разработал дизан
+                      наушников beats solo 3.                      
+                      </div>
+                  </div>
+                </div>
+              </li>
+              <li class="team__item member">
+                <div class="member__content">
+                  <img src="./img/team/team3.png" alt="" class="member__pic">
+                  <div class="member__name">
+                    <a href="#" class="member__name-link team-button">
+                      <div class="member__name-text">Мила Рыжкова</div>
+                      <div class="member__name-pic">
+                        <svg class="member__name-icon">
+                          <use xlink:href="./img/svg/sprite.svg#triangle-down"></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="member__desc team-dropdown">
+                    <div class="member__desc-subtitle">PR, маркетинг</div>
+                    <div class="member__desc-text">По всем вопросам сотрудничества 
+                      и рекламы писать только Миле.                      
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </li>
+          </ul>
         </section>
 
         <section class="section feedback">
@@ -716,6 +794,7 @@
   </div>
 
   <script src="./shop-slider.js"></script>
+  <script src="./team.js"></script>
   <script src="./fullscreen-menu.js"></script>
   <script src="./feedback.js"></script>
   <script src="./validateForm.js"></script>
