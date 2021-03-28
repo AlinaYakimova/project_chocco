@@ -28,11 +28,15 @@
   justify-content: space-between;
   align-items: center;
   flex: 1;
-  padding: rem(18px) 0px;
+  
   
   &--alight--right {
     display: flex;
     justify-content: flex-end;
+  }
+
+  @include phones {
+    padding: rem(18px) 0px;
   }
 }
 

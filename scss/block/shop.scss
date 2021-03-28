@@ -34,49 +34,51 @@
   will-change: right;
 }
 
-.shop-slider__arrow--left {
+.shop-slider__arrow {
   width: rem(20px);
   height: rem(20px);
-  border-top: 3px solid #000;
-  border-left: 3px solid #000;
   transform: rotate(-45deg);
-  border-radius: 2px;
-  position: absolute;
-  top: 47%;
-  left: rem(-16px);
   cursor: pointer;
   z-index: 10;
+  top: 47%;
+  position: absolute;
+  border-radius: 2px;
 
   @include tablets {
-    top: 26%;
-    left: rem(80px);
+    top: 30%;
   }
 
   @include phones {
-    left: rem(20px);
-  }
-}
-
-.shop-slider__arrow--right {
-  width: rem(20px);
-  height: rem(20px);
-  border-right: 3px solid #000;
-  border-bottom: 3px solid #000;
-  transform: rotate(-45deg);
-  border-radius: 2px;
-  position: absolute;
-  top: 47%;
-  right: rem(-16px);
-  cursor: pointer;
-  z-index: 10;
-
-  @include tablets {
     top: 26%;
-    right: rem(146px);
   }
 
-  @include phones {
-    right: rem(20px);
+  &--left {
+    border-top: 3px solid #000;
+    border-left: 3px solid #000;
+    left: rem(-16px);
+
+
+    @include tablets {
+      left: rem(80px);
+    }
+
+    @include phones {
+      left: rem(20px);
+    }
+  }
+
+  &--right {
+    border-right: 3px solid #000;
+    border-bottom: 3px solid #000;
+    right: rem(-16px);
+
+    @include tablets {
+      right: rem(80px);
+    }
+
+    @include phones {
+      right: rem(20px);
+    }
   }
 }
 
@@ -84,7 +86,7 @@
   display: flex;
   position: relative;
   right: 0;
-
+  transition: right 0.3 ease-out;
 }
 
 .shop__item {
@@ -141,8 +143,11 @@
   @include tablets {
     width: 70%;
   }
-}
 
+  @include phones {
+    width: 100%;
+  }
+}
 
 .slide__detail {
   min-width: rem(380px);
@@ -159,13 +164,13 @@
 
 .slide__text {
   margin-bottom: rem(24px);
-  line-height: rem(22px);
+  line-height: 1.2;
 }
 
 .slide__elem {
   display: flex;
   margin-bottom: rem(24px);
-  line-height: rem(22px);
+  line-height: 1.2;
   align-items: flex-start;
 
   &:last-child {

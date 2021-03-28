@@ -176,8 +176,8 @@
           <div class="container">
             <div class="shop-slider">
               <div class="shop-slider__arrows">
-                <a href="#" class="shop-slider__arrow--left" id="left"></a>
-                <a href="#" class="shop-slider__arrow--right" id="right"></a>
+                <a href="#" class="shop-slider__arrow shop-slider__arrow--left" id="left"></a>
+                <a href="#" class="shop-slider__arrow shop-slider__arrow--right" id="right"></a>
               </div>
               <div class="shop__sliders-wrap">
                 <ul class="shop__sliders" id="shop__sliders">
@@ -432,16 +432,19 @@
                       <div class="member__name-text">Борис Федорович</div>
                       <div class="member__name-pic">
                         <svg class="member__name-icon">
-                          <use xlink:href="./img/svg/sprite.svg#triangle-down"></use>
+                          <use xlink:href="img/svg/sprite.svg#triangle-down"></use>
                         </svg>
                       </div>
                     </a>
                   </div>
-                  <div class="member__desc team-dropdown">
-                    <div class="member__desc-subtitle">Главный технолог</div>
-                    <div class="member__desc-text">Отвечает за вкусовые качества 
-                      и калорийность.
-                      </div>
+                  <div class="member__desc-wrap team-dropdown">
+                    <div class="member__desc">
+                      <img src="./img/team/team4.png" alt="" class="member__pic--mobile">
+                      <div class="member__desc-subtitle">Главный технолог</div>
+                      <div class="member__desc-text">Отвечает за вкусовые качества 
+                        и калорийность.
+                        </div>
+                    </div>
                   </div>
                 </div>
               </li>
@@ -453,16 +456,19 @@
                       <div class="member__name-text">Алла Иванова</div>
                       <div class="member__name-pic">
                         <svg class="member__name-icon">
-                          <use xlink:href="./img/svg/sprite.svg#triangle-down"></use>
+                          <use xlink:href="img/svg/sprite.svg#triangle-down"></use>
                         </svg>
                       </div>
                     </a>
                   </div>
-                  <div class="member__desc team-dropdown">
-                    <div class="member__desc-subtitle">Специалист по упаковке</div>
-                    <div class="member__desc-text">Автор запоминающегося стиля 
-                      наших батончиков.                      
-                      </div>
+                  <div class="member__desc-wrap team-dropdown">
+                    <div class="member__desc">
+                      <img src="./img/team/team1.png" alt="" class="member__pic--mobile">
+                      <div class="member__desc-subtitle">Специалист по упаковке</div>
+                      <div class="member__desc-text">Автор запоминающегося стиля 
+                        наших батончиков.                      
+                        </div>
+                    </div>
                   </div>
                 </div>  
               </li>
@@ -474,16 +480,18 @@
                       <div class="member__name-text">Кирилл Матросов</div>
                       <div class="member__name-pic">
                         <svg class="member__name-icon">
-                          <use xlink:href="./img/svg/sprite.svg#triangle-down"></use>
+                          <use xlink:href="img/svg/sprite.svg#triangle-down"></use>
                         </svg>
                       </div>
                     </a>
                   </div>
-                  <div class="member__desc team-dropdown">
-                    <div class="member__desc-subtitle">Оператор</div>
-                    <div class="member__desc-text">Разработал дизан
-                      наушников beats solo 3.                      
-                      </div>
+                  <div class="member__desc-wrap team-dropdown">
+                    <div class="member__desc">
+                      <img src="./img/team/team2.png" alt="" class="member__pic--mobile">
+                      <div class="member__desc-subtitle">Оператор</div>
+                      <div class="member__desc-text">С радостью поможет подобрать батончики и оформить заказ.                      
+                        </div>
+                    </div>
                   </div>
                 </div>
               </li>
@@ -495,21 +503,53 @@
                       <div class="member__name-text">Мила Рыжкова</div>
                       <div class="member__name-pic">
                         <svg class="member__name-icon">
-                          <use xlink:href="./img/svg/sprite.svg#triangle-down"></use>
+                          <use xlink:href="img/svg/sprite.svg#triangle-down"></use>
                         </svg>
                       </div>
                     </a>
                   </div>
-                  <div class="member__desc team-dropdown">
-                    <div class="member__desc-subtitle">PR, маркетинг</div>
-                    <div class="member__desc-text">По всем вопросам сотрудничества 
-                      и рекламы писать только Миле.                      
+                  <div class="member__desc-wrap team-dropdown">
+                    <div class="member__desc">
+                      <img src="./img/team/team3.png" alt="" class="member__pic--mobile">
+                      <div class="member__desc-subtitle">PR, маркетинг</div>
+                      <div class="member__desc-text">По всем вопросам сотрудничества 
+                        и рекламы писать только Миле.                      
+                      </div>
                     </div>
                   </div>
                 </div>
               </li>
             </li>
           </ul>
+        </section>
+
+        <section class="section slider-menu">
+          <div class="container slider-menu__container">
+            <h1 class="slider-menu__title">меню</h1>
+            <ul class="slider-menu__list">
+              <li class="slider-menu__item">
+                <a href="" class="slider-menu__link">
+                  <span class="slider-menu__subtitle">Батночики с молоком</span>
+                </a>
+                <div class="slider-menu__text">Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее. Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы. 
+                </div>
+              </li>
+              <li class="slider-menu__item">
+                <a href="" class="slider-menu__link">
+                  <span class="slider-menu__subtitle">С мёдом и фруктами</span>
+                </a>
+                <div class="slider-menu__text">Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее. Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы. 
+                </div>
+              </li>
+              <li class="slider-menu__item">
+                <a href="" class="slider-menu__link">
+                  <span class="slider-menu__subtitle">Дикие ягоды</span>
+                </a>
+                <div class="slider-menu__text">Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее. Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы. 
+                </div>
+              </li>
+            </ul>
+          </div>
         </section>
 
         <section class="section feedback">
@@ -665,6 +705,8 @@
             </form>
           </div>
         </section>
+
+        
 
         <section class="section map">
           <footer class="footer">

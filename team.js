@@ -1,37 +1,71 @@
 (function () {
   const buttons = document.querySelectorAll('.team-button');
-  const memberDesc = document.querySelectorAll('.team-dropdown');
-  const memberPic = document.querySelectorAll('.member__pic');
-  
-  // let toggleDropdown = function () {
-  //   buttons.classList.toggle('team-button--is-active');
-  //   memberDesc.classList.toggle('team-dropdown--open');
-  // }
-  // buttons.addEventListener('click', toggleDropdown);
+  const content = document.querySelectorAll('.team-dropdown');
+  const memberDesc = document.querySelectorAll('.member__desc');
 
-  buttons.forEach((element, index) => {
-    element.addEventListener("click", (e) => {
+  function hideAccordeon() {
+    for (let i = 0; i < content.length; i++) {
+      content[i].style.height = "0px";
+      content[i].classList.remove("team-dropdown--is-active");
+      buttons[i].classList.remove("team-button--is-active");
+    }
+  }
+
+  function showAccordeon(i) {
+    let height = getComputedStyle(memberDesc[i]).height;
+    content[i].style.height = `${height}`;
+    content[i].classList.add("team-dropdown--is-active");
+    buttons[i].classList.add("team-button--is-active");
+  }
+
+  for (let i = 0; i < buttons.length; i++) {
+
+    buttons[i].addEventListener("click", (e) => {
       e.preventDefault();
-      buttons.forEach((button, i) => {
-        button.classList.toggle('team-button--is-active');
-        memberDesc[i].classList.toggle('team-dropdown--is-active');
-        memberPic[i].classList.toggle('member__pic--is-active');
 
-        button.classList.remove('team-button--is-active');
-        memberDesc[i].classList.remove('team-dropdown--is-active');
-        memberPic[i].classList.remove('member__pic--is-active');
-      })
-
-      element.classList.add('team-button--is-active');
-      memberDesc[index].classList.add('team-dropdown--is-active');
-      memberPic[index].classList.add('member__pic--is-active');
-    });
-  });
+      if (content[i].classList.contains("team-dropdown--is-active")) {
+        hideAccordeon();
+      } else {
+        hideAccordeon()
+        showAccordeon(i)
+      }
+    })
+  }
 
 
-  // menu.addEventListener("click", (e) => {
-  //   if (e.target.classList.contains("overlay-menu__link")) {
-  //     toggleMenu()
-  //   }
+  // мой вариант
+  // buttons.forEach((element, index) => {
+
+  //   element.addEventListener("click", (e) => {
+  //     e.preventDefault();
+
+  //       buttons.forEach((btn, i) => {
+
+  //         btn.classList.toggle('team-button--is-active');
+  //         content[i].classList.toggle('team-dropdown--is-active--2');
+  //         memberDesc[i].classList.toggle('member__desc--is-active');
+
+  //         btn.classList.remove('team-button--is-active');
+  //         content[i].classList.remove('team-dropdown--is-active--2');
+  //         memberDesc[i].classList.remove('member__desc--is-active');
+  //       })
+
+  //     element.classList.add('team-button--is-active');
+  //     content[index].classList.add('team-dropdown--is-active--2');
+  //     memberDesc[index].classList.add('member__desc--is-active');
+
+  //     content.forEach((element, ind) => {
+  //       element.addEventListener("click", (e) => {
+
+  //         element.classList.remove('team-button--is-active');
+  //         content[ind].classList.remove('team-dropdown--is-active--2');
+  //         memberDesc[ind].classList.remove('member__desc--is-active');
+  //       })
+  //     })
+  //   })
   // });
+
+
 })();
+
+

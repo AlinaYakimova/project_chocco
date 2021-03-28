@@ -1,0 +1,43 @@
+.slider-menu {
+  background: linear-gradient(rgba(0,0,0,0.1),
+  rgba(0,0,0,0.3)), url(../../img/bg-menu/bg1.png) center center / contain no-repeat;
+  color: #fff;
+  position: relative;
+  display: flex;
+   
+}
+
+.slider-menu__container {
+  justify-content: flex-start;
+  flex-direction: row; 
+}
+
+.slider-menu__title {
+  padding-top: rem(110px);
+  padding-left: rem(84px);
+}
+
+.slider-menu__list {
+  display: flex;
+}
+
+.slider-menu__item {
+  width: rem(102px);
+  display: flex;
+}
+
+.slider-menu__link {
+  position: absolute;
+  text-transform: rotate(90deg) translate(-50%, -50%);
+  transform-origin: 0 0;
+}
+
+.slider-menu__subtitle {
+  font-size: rem(48px);
+  line-height: 1.2;
+  
+}
+
+.slider-menu__text {
+  display: none;
+}

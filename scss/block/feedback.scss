@@ -62,7 +62,7 @@
   &__wrap {
     display: flex;
     overflow: hidden;
-    max-width: rem(940px);
+    width: 100%;
   }
 
   &__list-card {
@@ -87,7 +87,6 @@
     }
 
     @include tablets {
-      display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
@@ -106,7 +105,7 @@
       transform: translate(-50%, 0);
 
       @include tablets {
-        left: 43%;
+        top: -13%;
       }
 
       @include phones {
@@ -120,6 +119,7 @@
     height: rem(264px);
     max-width: 100%;
     margin-right: rem(40px);
+    flex-shrink: 0;
 
     @include tablets {
       width: rem(130px);
@@ -132,7 +132,7 @@
     display: flex;
     flex-direction: column;
     padding-top: rem(28px);
-    width: 46%;
+    width: rem(463px);
   }
 
   &__subtitle {
@@ -140,7 +140,7 @@
   }
 
   &__text {
-    line-height: 1;
+    line-height: 1.2;
     color: #666;
     margin-bottom: rem(25px);
 
