@@ -1,11 +1,6 @@
 (function () {
   const buttons = document.querySelectorAll(".feedback__link");
   const items = document.querySelectorAll(".feedback__card");
-  let step = setCurrentWidth();
-
-  window.addEventListener("resize", () => {
-    step = setCurrentWidth();
-  });
 
   buttons.forEach((element, index) => {
     element.addEventListener("click", (e) => {
@@ -20,11 +15,4 @@
     });
   });
   
-  function setCurrentWidth() {
-    let itemWidth = document.querySelector(".feedback__wrap").clientWidth;
-    items.forEach(i => {
-      i.style.width = `${itemWidth}px`;
-    })
-    return itemWidth;
-  };
 })();

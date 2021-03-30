@@ -6,14 +6,26 @@
     content: "";
     display: block;
     position: absolute;
-    background: url("../img/berry-bg/berry_2.png")left bottom 46% / contain no-repeat,
-      url("../img/shop/leaf-bg.png") left bottom / contain no-repeat;
+    background: url("../img/shop/leaf-bg.png") left bottom / contain no-repeat;
     z-index: 1;
-    width: rem(200px);
-    height: rem(460px);
+    width: rem(196px);
+    height: rem(452px);
     right: 0;
-    bottom: rem(-250px);
+    bottom: rem(-222px);
   }
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: url("../img/berry-bg/berry_2.png")left bottom 46% / contain no-repeat;
+    z-index: 1;
+    width: rem(136px);
+    height: rem(112px);
+    right: 10px;
+    bottom: rem(-70px);
+  }
+  
 }
 
 .shop__sliders-wrap {
@@ -30,8 +42,7 @@
   display: flex;
   padding: rem(66px) rem(0px) rem(110px);
   position: relative;
-  transition: right 1s;
-  will-change: right;
+  
 }
 
 .shop-slider__arrow {
@@ -86,7 +97,8 @@
   display: flex;
   position: relative;
   right: 0;
-  transition: right 0.3 ease-out;
+  transition: right 1s ease-out;
+  will-change: right;
 }
 
 .shop__item {

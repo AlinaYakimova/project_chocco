@@ -117,6 +117,11 @@
   }
 }
 
+.member__img {
+ @include phones {
+   max-height: rem(180px);
+ }
+}
 
 .member__pic {
   margin-bottom: rem(25px);

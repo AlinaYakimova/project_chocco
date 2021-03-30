@@ -1,0 +1,23 @@
+.modal {
+  background: #313131;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.modal__container {
+
+}
+
+.modal__block {
+  background: #fff;
+  width: 309px;
+  height: 176px;
+}
+
+.modal__content {
+  color: #000;
+  display: flex;
+  text-align: center;
+}
