@@ -29,6 +29,7 @@
 .form__block {
   flex: 1;
   margin-right: rem(15px);
+  position: relative;
   
   &:last-child {
     margin-right: 0;
@@ -58,6 +59,7 @@
 .form__comment--textarea {
   height: rem(152px);
   resize: none;
+  display: block;
 
   @include tablets {
     height: rem(86px);
@@ -65,7 +67,11 @@
 }
 
 .form__error {
+  font-size: rem(16px);
   color: red;
+  position: absolute;
+  left: 0;
+  top: 100%;
 }
 
 .form__controls {

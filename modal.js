@@ -6,3 +6,9 @@ $(".form").submit(e => {
     type: "inline"
   })
 });
+
+$(".js-submit-button").click(e=> {
+  e.preventDefault();
+
+  $.fancybox.close();
+})

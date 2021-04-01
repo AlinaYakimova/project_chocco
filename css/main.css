@@ -888,6 +888,7 @@ ul li {
 .common__button--green {
   background: #497870;
   color: #fff;
+  outline: none;
 }
 .common__button--green:last-child {
   margin-right: 0;
@@ -1521,6 +1522,11 @@ ul li {
 @media screen and (max-width: 480px) {
   .member__img {
     max-height: 10rem;
+    max-width: 7.6666666667rem;
+    flex-shrink: 0;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 1.1111111111rem;
   }
 }
 
@@ -1537,10 +1543,10 @@ ul li {
 }
 @media screen and (max-width: 768px) {
   .member__pic--mobile {
-    display: flex;
+    display: block;
     margin: 0 auto;
-    margin-bottom: 1.1111111111rem;
-    flex-shrink: 0;
+    max-width: 100%;
+    min-height: 100%;
   }
 }
 
@@ -1609,6 +1615,12 @@ ul li {
   right: 0;
   height: 100%;
 }
+@media screen and (max-width: 480px) {
+  .slider-menu__list {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
 
 .slider-menu__item {
   display: flex;
@@ -1640,10 +1652,10 @@ ul li {
   display: flex;
   font-size: 2.6666666667rem;
   line-height: 1.2;
-  transform: rotate(-90deg) translate(-50%, -50%);
+  transform: rotate(-90deg) translateY(-50%);
   position: absolute;
   left: 50%;
-  bottom: 22%;
+  bottom: 0;
   transform-origin: 0 0;
   white-space: nowrap;
 }
@@ -1651,6 +1663,11 @@ ul li {
 @media screen and (max-width: 480px) {
   .slider-menu__item--is-active {
     z-index: 10;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -1665,7 +1682,7 @@ ul li {
 .slider-menu__text {
   min-width: 29.1111111111rem;
   padding: 1.6666666667rem 2.1111111111rem;
-  line-height: 1.2;
+  line-height: 1.5;
   background: rgba(51, 53, 55, 0.9);
 }
 @media screen and (max-width: 768px) {
@@ -1675,7 +1692,7 @@ ul li {
 }
 @media screen and (max-width: 480px) {
   .slider-menu__text {
-    min-width: 21.6666666667rem;
+    min-width: calc 100vh - 5rem;
   }
 }
 
@@ -1959,6 +1976,7 @@ ul li {
 .form__block {
   flex: 1;
   margin-right: 0.8333333333rem;
+  position: relative;
 }
 .form__block:last-child {
   margin-right: 0;
@@ -1986,6 +2004,7 @@ ul li {
 .form__comment--textarea {
   height: 8.4444444444rem;
   resize: none;
+  display: block;
 }
 @media screen and (max-width: 768px) {
   .form__comment--textarea {
@@ -1994,7 +2013,11 @@ ul li {
 }
 
 .form__error {
+  font-size: 0.8888888889rem;
   color: red;
+  position: absolute;
+  left: 0;
+  top: 100%;
 }
 
 .form__controls {
@@ -2218,7 +2241,6 @@ ul li {
 }
 
 .modal {
-  background: #313131;
   display: none;
   justify-content: center;
   align-items: center;
@@ -2227,14 +2249,20 @@ ul li {
 
 .modal__block {
   background: #fff;
-  width: 309px;
-  height: 176px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
 }
 
 .modal__content {
   color: #000;
+  line-height: 1.2;
   display: flex;
   text-align: center;
+  margin-bottom: 1.1111111111rem;
+  min-width: 9.7777777778rem;
 }
 
 /*# sourceMappingURL=main.css.map */

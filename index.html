@@ -660,6 +660,7 @@
           <div class="container delivery-container">
             <h1 class="delivery__title">закажите доставку</h1>
             <form class="form">
+              <input type="hidden" name="to" value="example@mail.ruu">
               <div class="form__col">
                 <div class="form__row">
                   <label class="form__block">
@@ -702,8 +703,7 @@
                 <div class="form__row">
                   <label class="form__block">
                     <div class="form__title">Комментарий</div>
-                    <textarea type="text" class="form__comment form__comment--textarea" name="comment" required>
-                    </textarea>
+                    <textarea type="text" class="form__comment form__comment--textarea" name="comment" required></textarea>
                     <div class="form__error"></div>
                   </label>
                 </div>
@@ -873,13 +873,14 @@
       <div class="modal__block">
         <div class="modal__content">Сообщение отправлено</div>
         <button class="modal__button">
-          <a href="#" class="common__button common__button--green">закрыть</a>
+          <a href="#" class="common__button common__button--green js-submit-button">закрыть</a>
         </button>
       </div>
 
     </div>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   <script src="./fullscreen-menu.js"></script>

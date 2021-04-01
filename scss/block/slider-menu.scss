@@ -36,6 +36,11 @@
   position: absolute;
   right: 0;
   height: 100%;
+
+  @include phones {
+    width: 100%;
+    justify-content: flex-end;
+  }
 }
 
 .slider-menu__item {
@@ -73,21 +78,24 @@
   display: flex;
   font-size: rem(48px);
   line-height: 1.2;
-  transform: rotate(-90deg) translate(-50%, -50%);
+  transform: rotate(-90deg) translateY(-50%);
   position: absolute;
   left: 50%;
-  bottom: 22%;
+  bottom: 0;
   transform-origin: 0 0;
   white-space: nowrap;
 }
 
 .slider-menu__item--is-active {
-  // @include tablets {
-  //   left: 0;
-  // }
+  
   
   @include phones {
     z-index: 10;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -102,7 +110,7 @@
 .slider-menu__text {
   min-width: rem(524px);
   padding: rem(30px) rem(38px);
-  line-height: 1.2;
+  line-height: 1.5;
   background: rgba(51, 53, 55, 0.9);
 
   @include tablets {
@@ -110,6 +118,6 @@
   }
 
   @include phones {
-    min-width: rem(390px);
+    min-width: calc (100vh - #{rem(90px)});
   }
 }
