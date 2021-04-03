@@ -13,6 +13,7 @@ $z-hamburger: 21;
 $blue: #61C4D9;
 $lightBlue: #C6F7FF;
 $green: #497870;
+$lightgreen: #F8FAF9;
 $black: #292929;
 $grey: #B3B3B3;
 
@@ -39,6 +40,7 @@ $grey: #B3B3B3;
 @import './block/team.scss';
 @import './block/slider-menu.scss';
 @import './block/feedback.scss';
+@import './block/player.scss';
 @import './block/delivery.scss';
 @import './block/form.scss';
 @import './block/radio.scss';
