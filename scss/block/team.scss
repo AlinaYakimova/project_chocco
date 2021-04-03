@@ -94,11 +94,12 @@
     margin-bottom: 4px;
     font-weight: bold;
     font-size: rem(18px);
-    line-height: rem(21px);
+    line-height: 1.2;
   }
 
   &-text {
     color: #666666;
+
   }
 }
 
@@ -165,13 +166,19 @@
 
     @include tablets {
       font-size: rem(21px);
-      line-height: rem(25px);
+      line-height: 1.38;
     }
   }
 
   &-pic {
     width: 9px;
     height: 9px;
+
+    @include phones {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   &-icon {

@@ -1499,7 +1499,7 @@ ul li {
   margin-bottom: 4px;
   font-weight: bold;
   font-size: 1rem;
-  line-height: 1.1666666667rem;
+  line-height: 1.2;
 }
 .member__desc-text {
   color: #666666;
@@ -1566,12 +1566,19 @@ ul li {
 @media screen and (max-width: 768px) {
   .member__name-text {
     font-size: 1.1666666667rem;
-    line-height: 1.3888888889rem;
+    line-height: 1.38;
   }
 }
 .member__name-pic {
   width: 9px;
   height: 9px;
+}
+@media screen and (max-width: 480px) {
+  .member__name-pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .member__name-icon {
   width: 100%;
