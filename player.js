@@ -29,18 +29,30 @@ let eventsInit = () => {
     const barVol = $(e.currentTarget);
     const clickedPositionVol = e.originalEvent.layerX;
     const newButtonPositionVolumePercent = (clickedPositionVol / barVol.width()) * 100;
-    const newVolumePosition = (player.setVolume() / 100) * newButtonPositionVolumePercent;
 
     $(".player__volume-button").css({
-      left: `${newButtonPositionVolumePercent}%`
+      left: `${ newButtonPositionVolumePercent}%`
     });
+  player.setVolume(newButtonPositionVolumePercent);
+  console.log(newButtonPositionVolumePercent);
+});
 
-    player.getVolume(newVolumePosition);
-  });
+$(".player__volume-icon").click(e => {
+  e.preventDefault();
+  let soundOnOff = $(".player__sound");
 
-  $(".player__splash").click(e => {
-    player.playVideo();
-  })
+  if (soundOnOff.hasClass("muteOff")) {
+    player.mute();
+    soundOnOff.removeClass("muteOff");
+  } else {
+    soundOnOff.addClass("muteOff");
+    player.unMute();
+  }
+});
+
+$(".player__splash").click(e => {
+  player.playVideo();
+})
 }
 
 const formatTime = timeSec => {

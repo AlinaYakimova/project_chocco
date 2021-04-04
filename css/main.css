@@ -2059,8 +2059,36 @@ ul li {
   padding: 0;
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 100%;
   transform: translate(-50%, -50%);
+}
+
+.muteOff {
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+.muteOff::before {
+  display: block;
+  content: "";
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background: #fff;
+  transform: translate(0, -50%) rotate(45deg);
+}
+.muteOff::after {
+  display: block;
+  content: "";
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background: #fff;
+  transform: translate(0, -50%) rotate(-45deg);
 }
 
 .delivery {
