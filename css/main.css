@@ -2047,11 +2047,11 @@ ul li {
   position: absolute;
   top: 50%;
   left: 0;
-  background: #333333;
+  background: #626262;
   transform: translate(0, -50%);
 }
 .player__volume-button {
-  background: #333333;
+  background: #626262;
   border-radius: 50%;
   border: none;
   width: 12px;
@@ -2065,30 +2065,28 @@ ul li {
 
 .muteOff {
   position: relative;
-  width: 18px;
-  height: 18px;
 }
 .muteOff::before {
   display: block;
   content: "";
   height: 1px;
-  width: 100%;
+  width: 50%;
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 60%;
   background: #fff;
-  transform: translate(0, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 .muteOff::after {
   display: block;
   content: "";
   height: 1px;
-  width: 100%;
+  width: 50%;
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 60%;
   background: #fff;
-  transform: translate(0, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .delivery {

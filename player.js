@@ -37,16 +37,16 @@ let eventsInit = () => {
   console.log(newButtonPositionVolumePercent);
 });
 
-$(".player__volume-icon").click(e => {
+$(".player__sound").click(e => {
   e.preventDefault();
   let soundOnOff = $(".player__sound");
 
   if (soundOnOff.hasClass("muteOff")) {
-    player.mute();
+    player.unMute();
     soundOnOff.removeClass("muteOff");
   } else {
     soundOnOff.addClass("muteOff");
-    player.unMute();
+    player.mute();
   }
 });
 
