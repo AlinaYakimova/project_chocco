@@ -1,14 +1,14 @@
-const player = document.querySelector(".video");
-const playerContainer = document.querySelector('.player');
+let player;
+const playerContainer = $('.player')
 
-const eventsInit = () => {
+let eventsInit = () => {
   $(".player__start-pause").click(e => {
     e.preventDefault();
 
     if (playerContainer.hasClass("paused")) {
-      player.pause();
+      player.pauseVideo();
     } else {
-      player.play();
+      player.playVideo();
     }
   });
 
@@ -25,34 +25,35 @@ const eventsInit = () => {
     player.seekTo(newPlaybackPositionSec);
   });
 
+  // изменения громкости
   $(".player__volume").click(e => {
     const barVol = $(e.currentTarget);
     const clickedPositionVol = e.originalEvent.layerX;
     const newButtonPositionVolumePercent = (clickedPositionVol / barVol.width()) * 100;
 
     $(".player__volume-button").css({
-      left: `${newButtonPositionVolumePercent}%`
+      left: `${ newButtonPositionVolumePercent}%`
     });
-    player.setVolume(newButtonPositionVolumePercent);
-    console.log(newButtonPositionVolumePercent);
-  });
+  player.setVolume(newButtonPositionVolumePercent);
+  console.log(newButtonPositionVolumePercent);
+});
 
-  $(".player__sound").click(e => {
-    e.preventDefault();
-    let soundOnOff = $(".player__sound");
+$(".player__sound").click(e => {
+  e.preventDefault();
+  let soundOnOff = $(".player__sound");
 
-    if (soundOnOff.hasClass("muteOff")) {
-      player.unMute();
-      soundOnOff.removeClass("muteOff");
-    } else {
-      soundOnOff.addClass("muteOff");
-      player.mute();
-    }
-  });
+  if (soundOnOff.hasClass("muteOff")) {
+    player.unMute();
+    soundOnOff.removeClass("muteOff");
+  } else {
+    soundOnOff.addClass("muteOff");
+    player.mute();
+  }
+});
 
-  $(".player__splash").click(e => {
-    player.play();
-  })
+$(".player__splash").click(e => {
+  player.playVideo();
+})
 }
 
 const formatTime = timeSec => {

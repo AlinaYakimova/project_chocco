@@ -369,14 +369,16 @@ body {
 .wrapper {
   overflow: hidden;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-.wrapper-content {
-  flex: 1;
+.main-content {
+  height: 100%;
+  transition: 1s;
+  will-change: transform;
 }
 
 .container {
@@ -1941,15 +1943,8 @@ ul li {
 
 .player__wrapper {
   display: flex;
-}
-.player__wrapper .player__splash {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url("../../img/bg-menu/bg4.png") center center/cover no-repeat;
-  cursor: pointer;
+  width: 100%;
+  height: 100%;
 }
 .player__wrapper .player__splash-start {
   width: 48px;
