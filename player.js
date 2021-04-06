@@ -1,14 +1,17 @@
-const player = document.querySelector(".video");
-const playerContainer = document.querySelector('.player');
+let player = document.querySelector(".video");
+const playerContainer = $('.player');
 
-const eventsInit = () => {
+let eventsInit = () => {
   $(".player__start-pause").click(e => {
     e.preventDefault();
 
     if (playerContainer.hasClass("paused")) {
       player.pause();
+      onPlayerStateChange("pause");
     } else {
       player.play();
+      onPlayerStateChange("play");
+      console.log(e);
     }
   });
 
@@ -51,22 +54,29 @@ const eventsInit = () => {
   });
 
   $(".player__splash").click(e => {
-    player.play();
-  })
+    if (playerContainer.hasClass("paused")) {
+      player.pause();
+      onPlayerStateChange("pause");
+    } else {
+      player.play();
+      onPlayerStateChange("play");
+      console.log(e);
+    }
+  });
 }
 
-const formatTime = timeSec => {
-  const roundTime = Math.round(timeSec);
+// const formatTime = timeSec => {
+//   const roundTime = Math.round(timeSec);
 
-  const minutes = addZero(Math.floor(roundTime / 60));
-  const seconds = addZero(roundTime - minutes * 60);
+//   const minutes = addZero(Math.floor(roundTime / 60));
+//   const seconds = addZero(roundTime - minutes * 60);
 
-  function addZero(num) {
-    return num < 10 ? `0${num}` : num;
-  }
+//   function addZero(num) {
+//     return num < 10 ? `0${num}` : num;
+//   }
 
-  return `${minutes}:${seconds}`;
-}
+//   return `${minutes}:${seconds}`;
+// }
 
 const onPlayerReady = () => {
   let interval;
@@ -113,24 +123,24 @@ const onPlayerStateChange = event => {
 
 }
 
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player("yt-player", {
-    height: "405",
-    width: "660",
-    videoId: "teA9bCE-III",
-    events: {
-      onReady: onPlayerReady,
-      onStateChange: onPlayerStateChange
-    },
-    playerVars: {
-      controls: 0,
-      disablekb: 0,
-      showinfo: 0,
-      rel: 0,
-      autoplay: 0,
-      modestbranding: 0
-    }
-  });
-}
+// function onYouTubeIframeAPIReady() {
+//   player = new YT.Player("yt-player", {
+//     height: "405",
+//     width: "660",
+//     videoId: "teA9bCE-III",
+//     events: {
+//       onReady: onPlayerReady,
+//       onStateChange: onPlayerStateChange
+//     },
+//     playerVars: {
+//       controls: 0,
+//       disablekb: 0,
+//       showinfo: 0,
+//       rel: 0,
+//       autoplay: 0,
+//       modestbranding: 0
+//     }
+//   });
+// }
 
 eventsInit();
