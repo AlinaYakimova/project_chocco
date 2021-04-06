@@ -3,12 +3,17 @@
   top: 20%;
   right: calc(50% - 500px);
   z-index: $z-fixed-menu;
+
+  &--shadowed {
+    color: #000;
+  }
 }
+
 
 .fixed-menu__item {
   margin-bottom: rem(5px);
 
-  &--activ {
+  &--active {
     .fixed-menu__link {
       border-color: #fff;
     }

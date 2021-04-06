@@ -396,6 +396,11 @@ body {
   height: 100vh;
   min-height: 36.1111111111rem;
 }
+@media screen and (max-width: 480px) {
+  .section {
+    height: 100%;
+  }
+}
 
 * {
   box-sizing: border-box;
@@ -2395,11 +2400,14 @@ ul li {
   right: calc(50% - 500px);
   z-index: 100;
 }
+.fixed-menu--shadowed {
+  color: #000;
+}
 
 .fixed-menu__item {
   margin-bottom: 0.2777777778rem;
 }
-.fixed-menu__item--activ .fixed-menu__link {
+.fixed-menu__item--active .fixed-menu__link {
   border-color: #fff;
 }
 
