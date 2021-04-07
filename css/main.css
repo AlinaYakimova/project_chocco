@@ -2399,16 +2399,20 @@ ul li {
   top: 20%;
   right: calc(50% - 500px);
   z-index: 100;
+  color: #fff;
 }
 .fixed-menu--shadowed {
   color: #000;
 }
+.fixed-menu--shadowed .fixed-menu__link:before {
+  background: #000;
+}
 
 .fixed-menu__item {
-  margin-bottom: 0.2777777778rem;
+  margin-bottom: 5px;
 }
 .fixed-menu__item--active .fixed-menu__link {
-  border-color: #fff;
+  border-color: inherit;
 }
 
 .fixed-menu__link {

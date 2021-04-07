@@ -3,19 +3,24 @@
   top: 20%;
   right: calc(50% - 500px);
   z-index: $z-fixed-menu;
+  color: #fff;
 
   &--shadowed {
     color: #000;
+    .fixed-menu__link:before {
+      background: #000;
+    }
+    
   }
 }
 
 
 .fixed-menu__item {
-  margin-bottom: rem(5px);
+  margin-bottom: 5px;
 
   &--active {
     .fixed-menu__link {
-      border-color: #fff;
+      border-color: inherit;
     }
   }
 }

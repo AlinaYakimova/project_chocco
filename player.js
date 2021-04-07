@@ -1,69 +1,143 @@
-let player = document.querySelector(".video");
+let player = document.getElementById("video");
 const playerContainer = $('.player');
 
-let eventsInit = () => {
-  $(".player__start-pause").click(e => {
+player.onloadeddata = function () {
+
+  $(".player__start-pause, .video").click(e => {
     e.preventDefault();
 
     if (playerContainer.hasClass("paused")) {
-      player.pause();
+
       onPlayerStateChange("pause");
     } else {
-      player.play();
+
       onPlayerStateChange("play");
-      console.log(e);
     }
+
+    console.log(e);
   });
 
   $(".player__playback").click(e => {
     const bar = $(e.currentTarget);
     const clickedPosition = e.originalEvent.layerX;
     const newButtonPositionPercent = (clickedPosition / bar.width()) * 100;
-    const newPlaybackPositionSec = (player.getDuration() / 100) * newButtonPositionPercent;
+    const newPlaybackPositionSec = (player.duration / 100) * newButtonPositionPercent;
 
     $(".player__playback-button").css({
       left: `${newButtonPositionPercent}%`
     });
 
-    player.seekTo(newPlaybackPositionSec);
+    player.currentTime = newPlaybackPositionSec;
   });
+};
 
-  $(".player__volume").click(e => {
-    const barVol = $(e.currentTarget);
-    const clickedPositionVol = e.originalEvent.layerX;
-    const newButtonPositionVolumePercent = (clickedPositionVol / barVol.width()) * 100;
+$(".player__volume").click(e => {
+  const barVol = $(e.currentTarget);
+  const clickedPositionVol = e.originalEvent.layerX;
+  console.log(clickedPositionVol);
+  const newButtonPositionVolumePercent = (clickedPositionVol / barVol.width()) * 100;
 
-    $(".player__volume-button").css({
-      left: `${newButtonPositionVolumePercent}%`
-    });
-    player.setVolume(newButtonPositionVolumePercent);
-    console.log(newButtonPositionVolumePercent);
+  $(".player__volume-button").css({
+    left: `${newButtonPositionVolumePercent}%`
   });
+  player.volume = newButtonPositionVolumePercent / 100;
+  console.log(newButtonPositionVolumePercent);
+});
 
-  $(".player__sound").click(e => {
-    e.preventDefault();
-    let soundOnOff = $(".player__sound");
+let currentVolume;
+$(".player__sound").click(e => {
+  e.preventDefault();
+  let soundOnOff = $(".player__sound");
+  if (player.volume !== 0) {
+    currentVolume = player.volume
+  };
 
-    if (soundOnOff.hasClass("muteOff")) {
-      player.unMute();
-      soundOnOff.removeClass("muteOff");
-    } else {
-      soundOnOff.addClass("muteOff");
-      player.mute();
-    }
+  if (soundOnOff.hasClass("muteOff")) {
+    player.volume = currentVolume;
+    soundOnOff.removeClass("muteOff");
+
+  } else {
+    soundOnOff.addClass("muteOff");
+    player.volume = 0;
+  }
+  $(".player__volume-button").css({
+    left: `${player.volume * 100}%`
   });
+});
 
-  $(".player__splash").click(e => {
-    if (playerContainer.hasClass("paused")) {
-      player.pause();
-      onPlayerStateChange("pause");
-    } else {
+let interval;
+const onPlayerStateChange = event => {
+  switch (event) {
+    case "play":
       player.play();
-      onPlayerStateChange("play");
-      console.log(e);
-    }
-  });
+      playerContainer.addClass("active");
+      playerContainer.addClass("paused");
+
+      interval = setInterval(() => {
+        const completedSec = player.currentTime;
+        const completedPercent = (completedSec / durationSec) * 100;
+    
+        $(".player__playback-button").css({
+          left: `${completedPercent}%`
+        });
+      }, 1000);
+      break;
+
+    case "pause":
+      player.pause();
+      playerContainer.removeClass("active");
+      playerContainer.removeClass("paused");
+
+      if (typeof interval !== "underfined") {
+        clearInterval(interval);
+      }
+      break;
+  }
+  
+  const durationSec = player.duration;
+
 }
+
+
+
+// let player = document.getElementById('video');
+// const playerContainer = $('.player');
+
+// $(document).ready(function () {
+//   let player = document.getElementById('video');
+//   console.log(player.duration);
+// })
+// let eventsInit = () => {
+//   console.log("player", player);
+
+//   $(".player__start-pause").click(e => {
+//     e.preventDefault();
+
+//     if (playerContainer.hasClass("paused")) {
+
+//       onPlayerStateChange("pause");
+//     } else {
+
+//       onPlayerStateChange("play");
+//     }
+
+//     console.log(e);
+//   });
+
+//  
+
+//   
+
+//   $(".player__wrapper").click(e => {
+
+//     if (playerContainer.hasClass("paused")) {
+//       onPlayerStateChange("pause");
+//     } else {
+//       onPlayerStateChange("play");
+//     }
+//      console.log(e);
+//   });
+// }
 
 // const formatTime = timeSec => {
 //   const roundTime = Math.round(timeSec);
@@ -78,50 +152,11 @@ let eventsInit = () => {
 //   return `${minutes}:${seconds}`;
 // }
 
-const onPlayerReady = () => {
-  let interval;
-  const durationSec = player.getDuration();
+// const onPlayerReady = () => {
+//   
+// }
 
-  $(".player__duration-estimate").text(formatTime(durationSec));
 
-  if (typeof interval !== "underfined") {
-    clearInterval(interval);
-  }
-
-  interval = setInterval(() => {
-    const completedSec = player.getCurrentTime();
-    const completedPercent = (completedSec / durationSec) * 100;
-
-    $(".player__playback-button").css({
-      left: `${completedPercent}%`
-    });
-
-    $(".player__duration-completed").text(formatTime(completedSec));
-  }, 1000);
-}
-
-const onPlayerStateChange = event => {
-  /*
-   -1 (воспроизведение видео не начато)
-   0 (воспроизведение видео завершено)
-   1 (воспроизведение)
-   2 (пауза)
-   3 (буферизация)
-   5 (видео подают реплики).
- */
-  switch (event.data) {
-    case 1:
-      playerContainer.addClass("active");
-      playerContainer.addClass("paused");
-      break;
-
-    case 2:
-      playerContainer.removeClass("active");
-      playerContainer.removeClass("paused");
-      break;
-  }
-
-}
 
 // function onYouTubeIframeAPIReady() {
 //   player = new YT.Player("yt-player", {
@@ -143,4 +178,4 @@ const onPlayerStateChange = event => {
 //   });
 // }
 
-eventsInit();
+// eventsInit();
