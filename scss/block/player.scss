@@ -49,6 +49,7 @@
   .player__start {
     display: none;
   }
+
   .player__paused {
     display: flex;
   }
@@ -65,24 +66,25 @@
   width: 100%;
   height: 100%;
 
-  .player__splash {
-    // position: absolute;
-    // top: 0;
-    // left: 0;
-    // right: 0;
-    // bottom: 0;
-    // background: url("../../img/bg-menu/bg4.png") center center/cover no-repeat;
-    // cursor: pointer;
-
-    &-start {
-      width: 48px;
-      height: 70px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+  &-start {
+    width: 48px;
+    height: 70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
+}
+
+.player__poster {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../../img/bg-menu/bg5.png") center center/cover no-repeat;
+  cursor: pointer;
+  z-index: 1;
 }
 
 .player__controls {
@@ -91,9 +93,10 @@
   justify-content: space-between;
   width: 100%;
   background: #151515;
-  position: absolute;
+  position: relative;
   bottom: 0;
   padding: rem(10px) rem(17px);
+  z-index: 2;
 }
 
 .player__splash-start {
@@ -106,6 +109,8 @@
   width: 12px;
   height: 17px;
   cursor: pointer;
+  margin-right: rem(10px);
+
 }
 
 .player__icon {
@@ -116,11 +121,12 @@
 
 
 
-.player__playback {  
+.player__playback {
   position: relative;
-  width: 446px;
   height: 16px;
-  
+  flex: 1;
+  margin-right: rem(10px);
+
   &::before {
     display: block;
     content: "";
@@ -160,7 +166,11 @@
   margin-left: 5px;
 }
 
-.player__volume {  
+.player__sound {
+  margin-right: rem(10px);
+}
+
+.player__volume {
   position: relative;
   width: 80px;
   height: 18px;
@@ -170,7 +180,7 @@
     height: 17px;
     cursor: pointer;
   }
-  
+
   &::before {
     display: block;
     content: "";
@@ -199,7 +209,7 @@
 
 .muteOff {
   position: relative;
-  
+
   &::before {
     display: block;
     content: "";
@@ -211,7 +221,7 @@
     background: #fff;
     transform: translate(-50%, -50%) rotate(45deg);
   }
-  
+
   &::after {
     display: block;
     content: "";
@@ -222,5 +232,18 @@
     left: 60%;
     background: #fff;
     transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+.video {
+  max-width: 631px;
+  height: auto;
+
+  @include tablets {
+    width: rem(590px);
+  }
+
+  @include phones {
+    width: 100%;
   }
 }

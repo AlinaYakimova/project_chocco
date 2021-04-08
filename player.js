@@ -3,14 +3,14 @@ const playerContainer = $('.player');
 
 player.onloadeddata = function () {
 
-  $(".player__start-pause, .video").click(e => {
+  $(".player__start-pause, .video, .player__poster").click(e => {
     e.preventDefault();
 
     if (playerContainer.hasClass("paused")) {
-
+      $(".player__poster").show();
       onPlayerStateChange("pause");
     } else {
-
+      $(".player__poster").hide();
       onPlayerStateChange("play");
     }
 

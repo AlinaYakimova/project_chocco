@@ -57,6 +57,10 @@
      request.done(function (data) {
        console.log("done", data);
       $(".modal__content").text(data.message);
+      form.elements.name.value = "";
+      form.elements.phone.value = "";
+      form.elements.comment.value = "";
+
      });
      request.fail(function (data) {
       console.log("fail", data);

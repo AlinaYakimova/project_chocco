@@ -106,15 +106,10 @@ if(isMobile) {
 $("body").swipe({
   //Generic swipe handler for all directions
   swipe: function (event, direction) {
-    const scroller = viewportScroller();
-    let scrollDirection = "";
 
-    if (direction === "up") scrollDirection = "next";
-    if (direction === "down") scrollDirection = "prev";
+    if (direction === "up") scrollViewport("next");
+    if (direction === "down") scrollViewport("prev");
 
-    scroler[scrollDirection]();
-
-    // alert(direction);
   },
 });
 }
