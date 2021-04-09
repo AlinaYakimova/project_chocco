@@ -1,4 +1,4 @@
-(function () {
+(function(){
 
   const form = document.querySelector(".form");
   const send = document.querySelector("#form-submit");
@@ -54,24 +54,24 @@
           to: form.elements.to.value
         }
       });
-     request.done(function (data) {
-       console.log("done", data);
-      $(".modal__content").text(data.message);
-      form.elements.name.value = "";
-      form.elements.phone.value = "";
-      form.elements.comment.value = "";
+      request.done(function (data) {
+        console.log("done", data);
+        $(".modal__content").text(data.message);
+        form.elements.name.value = "";
+        form.elements.phone.value = "";
+        form.elements.comment.value = "";
 
-     });
-     request.fail(function (data) {
-      console.log("fail", data);
-       $(".modal__content").text(data.responseJSON.message);
-     });
-     request.always(
-      $.fancybox.open({
-        src: "#modal",
-        type: "inline"
-      })
-     );
+      });
+      request.fail(function (data) {
+        console.log("fail", data);
+        $(".modal__content").text(data.responseJSON.message);
+      });
+      request.always(
+        $.fancybox.open({
+          src: "#modal",
+          type: "inline"
+        })
+      );
     }
   });
 

@@ -1,4 +1,4 @@
-(function () {
+(function(){
   const buttons = document.querySelectorAll(".slider-menu__item");
   const content = document.querySelectorAll(".slider-menu__text-wrap");
   const text = document.querySelectorAll(".slider-menu__text");

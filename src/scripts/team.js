@@ -1,4 +1,4 @@
-(function () {
+(function(){
   const buttons = document.querySelectorAll('.team-button');
   const content = document.querySelectorAll('.team-dropdown');
   const memberDesc = document.querySelectorAll('.member__desc');
@@ -32,7 +32,6 @@
     })
   }
 
-
   // мой вариант
   // buttons.forEach((element, index) => {
 
@@ -64,8 +63,5 @@
   //     })
   //   })
   // });
-
-
 })();
-
 

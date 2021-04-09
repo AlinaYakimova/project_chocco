@@ -1,4 +1,5 @@
-(function () {
+(function(){
+  
   const buttons = document.querySelectorAll(".feedback__link");
   const items = document.querySelectorAll(".feedback__card");
 
