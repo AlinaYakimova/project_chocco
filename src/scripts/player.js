@@ -103,7 +103,7 @@
 
 
 
-// let player = document.getElementById('video');
+/*// let player = document.getElementById('video');
 // const playerContainer = $('.player');
 
 // $(document).ready(function () {
@@ -181,4 +181,4 @@
 //   });
 // }
 
-// eventsInit();
+// eventsInit();*/

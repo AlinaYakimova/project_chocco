@@ -56,7 +56,7 @@
   };
 })();
 
-  // const leftArrow = document.querySelector("#left");
+  /*// const leftArrow = document.querySelector("#left");
   // const rightArrow = document.querySelector("#right");
   // const itemsList = document.querySelector("#shop__sliders");
   // const computedStyles = window.getComputedStyle(itemsList);
@@ -96,5 +96,5 @@
   //     currentRight -= step;
   //     itemsList.style.right = `${currentRight}px`;
   //   }
-  // });
+  // });*/
 

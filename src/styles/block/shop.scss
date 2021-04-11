@@ -151,6 +151,7 @@
 
 .slide__block--right {
   width: 38%;
+  align-items: flex-start;
 
   @include tablets {
     width: 70%;
@@ -159,10 +160,6 @@
   @include phones {
     width: 100%;
   }
-}
-
-.slide__detail {
-  min-width: rem(380px);
 }
 
 .slide__title {

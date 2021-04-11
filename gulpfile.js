@@ -30,6 +30,16 @@ task('copy:html', () => {
     .pipe(dest(DIST_PATH))
     .pipe(reload({ stream: true }));
 });
+task('copy:img', () => {
+  return src([`${SRC_PATH}/img/**/*.*`,`${SRC_PATH}/img/**/*.svg`])
+    .pipe(dest(`${DIST_PATH}/img`))
+    .pipe(reload({ stream: true }));
+});
+task('copy:video', () => {
+  return src(`${SRC_PATH}/video/**/*.*`)
+    .pipe(dest(`${DIST_PATH}/video`))
+    .pipe(reload({ stream: true }));
+});
 const styles = [
   //  'node_modules/normalize.css/normalize.css'
   'src/styles/main.scss'
@@ -40,9 +50,9 @@ task('styles', () => {
   .pipe(concat('main.min.scss'))
   .pipe(sassGlob())
   .pipe(sass().on('error', sass.logError))
-  .pipe(px2rem())
+  // .pipe(px2rem())
   .pipe(gulpif(env === 'prod', autoprefixer({
-      browsers: ['last 2 versions'],
+      overrideBrowsersList: ['last 2 versions'],
       cascade: false
     })))
   .pipe(gulpif(env === 'prod', gcmq()))
@@ -65,13 +75,15 @@ task('scripts', () => {
     .pipe(reload({ stream: true }));
  });
 task('svg', () => {
-  return src('src/img/svg/*.svg')
+  return src('src/img/svg/**/*.svg')
     .pipe(svgo({
       plugins: [
         {
           removeAttrs: {
             attrs: '(fill|stroke|style|width|height|data.*)'
-          }
+          },
+          removeViewBox: false,
+          removeDimensions: true
         }
       ]
     }))
@@ -96,14 +108,15 @@ task('watch', () => {
   watch('./src/styles/**/*.scss', series('styles'));
   watch('./src/*.html', series('copy:html'));
   watch('./src/scripts/*.js', series('scripts'));
-  watch('./src/img/svg/*.svg', series('svg'));
+  watch('./src/img/svg/**/*.svg', series('svg'));
+  watch('./src/img/**/*.*', series('copy:img'));
  });
   
   
  task('default',
   series(
     'clean',
-    parallel('copy:html', 'styles', 'scripts', 'svg'),
+    parallel('copy:video', 'copy:html', 'copy:img', 'styles', 'scripts', 'svg'),
     parallel('watch', 'server')
   )
  );
@@ -111,5 +124,5 @@ task('watch', () => {
  task('build',
   series(
     'clean',
-    parallel('copy:html', 'styles', 'scripts', 'svg'))
+    parallel('copy:video', 'copy:html', 'copy:img', 'styles', 'scripts', 'svg'))
  );

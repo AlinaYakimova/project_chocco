@@ -1,4 +1,4 @@
-(function(){
+/*(function(){
 
   let player;
   const playerContainer = $('.player')
@@ -102,7 +102,7 @@
      3 (буферизация)
      5 (видео подают реплики).
    */
-    switch (event.data) {
+    /*switch (event.data) {
       case 1:
         playerContainer.addClass("active");
         playerContainer.addClass("paused");
@@ -138,4 +138,5 @@
 
   eventsInit();
 
-})();
+})();*/
+

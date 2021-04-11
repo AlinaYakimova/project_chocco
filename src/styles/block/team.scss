@@ -156,6 +156,10 @@
   &-link {
     display: flex;
     align-items: flex-start;
+
+    @include phones {
+      align-items: center;
+    }
   }
 
   &-text {
