@@ -118,6 +118,6 @@
   }
 
   @include phones {
-    min-width: calc (100vh - #{rem(90px)});
+    min-width: calc (100vw - #{rem(90px)});
   }
 }
